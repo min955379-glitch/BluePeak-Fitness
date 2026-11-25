@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Local / deployment artifacts
+.vercel/
+.env
+.env.*
+*.log
+.DS_Store

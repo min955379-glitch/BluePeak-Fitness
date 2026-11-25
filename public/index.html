@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BluePeak Fitness — Strength, Conditioning &amp; Athletic Club</title>
+  <meta name="description" content="BluePeak Fitness: 14,500 sq ft of Eleiko and Rogue power racks, a 40-metre sled turf lane, Concept2 ergometers and CSCS-certified coaching. Claim a free 3-day pass." />
+  <meta name="theme-color" content="#0B1120" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230B1120'/%3E%3Cpath d='M3 19L10.5 6L15 13.5L17.5 9.5L21 19H3Z' fill='%2322D3EE'/%3E%3C/svg%3E" />
+
+  <!-- Editorial & Technical Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <!-- Compiled Tailwind CSS (source: src/input.css, build: npm run build) -->
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-navy-950 overflow-x-hidden">
+
+  <!-- ==================== TOP UTILITY BAR (LIVE CLUB STATUS) ==================== -->
+  <div class="bg-navy-900 border-b border-white/[0.08] text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-10 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 overflow-hidden">
+        <span id="liveStatusBadge" class="inline-flex items-center gap-2 font-mono font-semibold text-cyan-400 shrink-0" aria-live="polite">
+          <span class="relative flex h-2 w-2" aria-hidden="true">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+          </span>
+          <span id="liveStatusText">CLUB OPEN · 05:00 – 23:00</span>
+        </span>
+        <span class="hidden md:inline text-slate-600" aria-hidden="true">|</span>
+        <span class="hidden md:inline text-slate-400 truncate">742 Mercer Industrial Way, North District · Free Member Parking</span>
+      </div>
+
+      <div class="flex items-center gap-4 shrink-0">
+        <a href="tel:+15552398840" class="font-mono text-slate-300 hover:text-cyan-400 transition-colors hidden sm:inline">
+          +1 (555) 239-8840
+        </a>
+        <button type="button" data-open-booking data-title="3-Day All-Access Club Pass" data-subtitle="Test our lifting floor, conditioning turf, and coached classes for 3 consecutive days." class="text-gold-400 hover:text-gold-300 font-bold tracking-wide uppercase transition-colors">
+          Claim 3-Day Pass →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== STICKY EDITORIAL NAVBAR ==================== -->
+  <header id="mainHeader" class="sticky top-0 z-40 bg-navy-950/90 backdrop-blur-md border-b border-white/[0.08] transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Monogram & Wordmark -->
+        <a href="#" aria-label="BluePeak Fitness home" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg">
+          <div class="w-10 h-10 rounded-lg bg-navy-900 border border-cyan-500/40 flex items-center justify-center relative overflow-hidden group-hover:border-cyan-400 transition-colors">
+            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-transparent"></div>
+            <svg class="w-5 h-5 text-cyan-400 relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+              <path stroke-linecap="square" stroke-linejoin="miter" d="M3 19L10.5 6L15 13.5L17.5 9.5L21 19H3Z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-display text-2xl font-extrabold tracking-tight text-white leading-none uppercase">
+              BLUEPEAK<span class="text-cyan-400">.</span>
+            </div>
+            <div class="font-mono text-[10px] tracking-[0.22em] text-slate-400 uppercase mt-1">
+              STRENGTH &amp; CONDITIONING
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Scroll-Spy Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300" id="desktopNav" aria-label="Primary">
+          <a href="#floor-zones" data-nav="floor-zones" class="nav-link hover:text-white transition-colors py-1 border-b-2 border-transparent">Floor &amp; Zones</a>
+          <a href="#schedule" data-nav="schedule" class="nav-link hover:text-white transition-colors py-1 border-b-2 border-transparent">Class Timetable</a>
+          <a href="#calculator" data-nav="calculator" class="nav-link hover:text-white transition-colors py-1 border-b-2 border-transparent">TDEE &amp; Macros</a>
+          <a href="#coaches" data-nav="coaches" class="nav-link hover:text-white transition-colors py-1 border-b-2 border-transparent">Coaches</a>
+          <a href="#pricing" data-nav="pricing" class="nav-link hover:text-white transition-colors py-1 border-b-2 border-transparent">Memberships</a>
+          <a href="#faq" data-nav="faq" class="nav-link hover:text-white transition-colors py-1 border-b-2 border-transparent">FAQ</a>
+        </nav>
+
+        <!-- Primary CTA & Mobile Drawer Button -->
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            data-open-booking data-title="3-Day All-Access Club Pass" data-subtitle="Full floor access, complimentary InBody composition scan, and 1 group session."
+            class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-bold text-sm tracking-wide transition-all shadow-lg shadow-cyan-500/20 active:scale-[0.98]"
+          >
+            <span>Book Free Trial</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+            </svg>
+          </button>
+
+          <button type="button" id="mobileDrawerBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer" class="lg:hidden p-2.5 rounded-lg bg-navy-900 border border-white/[0.08] text-slate-200 hover:text-cyan-400 transition-colors">
+            <svg id="iconMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="iconMenuClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Out Drawer -->
+    <div id="mobileDrawer" class="hidden lg:hidden bg-navy-900 border-b border-white/[0.08] px-4 pt-3 pb-6 space-y-1.5">
+      <a href="#floor-zones" class="mobile-drawer-link block px-4 py-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400">Floor &amp; Training Zones</a>
+      <a href="#schedule" class="mobile-drawer-link block px-4 py-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400">Weekly Class Timetable</a>
+      <a href="#calculator" class="mobile-drawer-link block px-4 py-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400">TDEE &amp; Macro Calculator</a>
+      <a href="#coaches" class="mobile-drawer-link block px-4 py-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400">Coaching Roster</a>
+      <a href="#pricing" class="mobile-drawer-link block px-4 py-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400">Membership Plans</a>
+      <a href="#faq" class="mobile-drawer-link block px-4 py-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400">Club FAQ</a>
+      <div class="pt-3">
+        <button
+          type="button"
+          data-open-booking data-title="3-Day All-Access Club Pass" data-subtitle="Full floor access, complimentary InBody composition scan, and 1 group session."
+          class="w-full py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/20"
+        >
+          Claim 3-Day Free Pass
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+  <!-- ==================== 1. EDITORIAL ASYMMETRIC HERO ==================== -->
+  <section class="relative bg-navy-950 bg-grid-pattern border-b border-white/[0.08] overflow-hidden">
+    <!-- Ambient Lighting Accents (Cyan & Gold only) -->
+    <div class="absolute -top-32 left-1/4 w-[500px] h-[500px] bg-cyan-500/[0.07] rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-0 right-1/4 w-[420px] h-[420px] bg-gold-500/[0.05] rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-20 lg:pb-24 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Left Column: Editorial Copy & Dual Actions -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-md bg-navy-900 border border-gold-500/30 mb-6">
+            <span class="font-mono text-xs font-bold text-gold-400 uppercase tracking-wider">Q4 Intake Open</span>
+            <span class="text-slate-600" aria-hidden="true">·</span>
+            <span class="text-xs font-medium text-slate-300">$0 Initiation Fee Through Sunday</span>
+          </div>
+
+          <h1 class="font-display text-5xl sm:text-6xl lg:text-[74px] font-extrabold uppercase tracking-tight text-white leading-[0.96]">
+            SERIOUS IRON.<br />
+            MEASURED PROGRESS.<br />
+            <span class="text-cyan-400">NO GIMMICKS.</span>
+          </h1>
+
+          <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+            14,500 square feet of calibrated Eleiko &amp; Rogue power racks, a 40-meter sled turf lane, Concept2 ergometers, and CSCS-certified coaching built for lifters and everyday athletes who train with intent.
+          </p>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <button
+              type="button"
+              data-open-booking data-title="3-Day All-Access Club Pass" data-subtitle="Experience the floor during peak or off-peak hours with zero obligation."
+              class="px-7 py-4 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-extrabold text-sm sm:text-base tracking-wide transition-all shadow-xl shadow-cyan-500/20 flex items-center justify-center gap-2.5 active:scale-[0.98]"
+            >
+              <span>Claim Your 3-Day Free Pass</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </button>
+
+            <a
+              href="#schedule"
+              class="px-7 py-4 rounded-lg bg-navy-900 hover:bg-navy-800 border border-white/[0.12] hover:border-cyan-500/40 text-white font-bold text-sm sm:text-base text-center transition-all"
+            >
+              Inspect Class Timetable
+            </a>
+          </div>
+
+          <!-- Social Proof Strip -->
+          <div class="mt-10 pt-8 border-t border-white/[0.08] flex flex-wrap items-center gap-6 sm:gap-10">
+            <div>
+              <div class="flex items-center gap-1 text-gold-400" role="img" aria-label="Rated 4.9 out of 5">
+                <span class="font-mono text-lg font-bold text-white mr-1" aria-hidden="true">4.9</span>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Member rating</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-extrabold uppercase text-white leading-none">CSCS</p>
+              <p class="text-xs text-slate-400 mt-1">Certified coaching staff</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-extrabold uppercase text-white leading-none">Free</p>
+              <p class="text-xs text-slate-400 mt-1">Member parking on site</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Club Spec Sheet -->
+        <aside class="lg:col-span-5" aria-label="Club specifications">
+          <div class="bg-navy-900 border border-white/[0.08] rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/40">
+            <div class="flex items-center justify-between mb-6">
+              <p class="font-mono text-xs font-bold text-cyan-400 uppercase tracking-[0.2em]">Club Spec Sheet</p>
+              <span class="font-mono text-[10px] text-slate-500 uppercase">Rev. Q4</span>
+            </div>
+            <dl class="divide-y divide-white/[0.06]">
+              <div class="flex items-baseline justify-between gap-4 py-4">
+                <dt class="text-sm text-slate-400">Training floor</dt>
+                <dd class="font-display text-2xl font-extrabold uppercase text-white">14,500 sq ft</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-4 py-4">
+                <dt class="text-sm text-slate-400">Power racks</dt>
+                <dd class="font-display text-xl font-bold uppercase text-white text-right">Eleiko &amp; Rogue</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-4 py-4">
+                <dt class="text-sm text-slate-400">Sled lane</dt>
+                <dd class="font-display text-xl font-bold uppercase text-white">40 m turf</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-4 py-4">
+                <dt class="text-sm text-slate-400">Conditioning</dt>
+                <dd class="font-display text-xl font-bold uppercase text-white">Concept2 erg bay</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-4 py-4">
+                <dt class="text-sm text-slate-400">Coaching</dt>
+                <dd class="font-display text-xl font-bold uppercase text-white">CSCS-certified</dd>
+              </div>
+            </dl>
+            <button
+              type="button"
+              data-open-booking data-title="Book Your Floor Tour" data-subtitle="See the racks, turf and erg bay in person. Tell us a little about your goals and we will set a time."
+              class="mt-6 w-full py-3.5 rounded-lg bg-navy-950 hover:bg-navy-800 border border-cyan-500/30 hover:border-cyan-400 text-cyan-400 font-bold text-sm tracking-wide transition-colors"
+            >
+              Book a Floor Tour
+            </button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. FLOOR & TRAINING ZONES ==================== -->
+  <section id="floor-zones" class="scroll-mt-24 bg-navy-950 py-20 lg:py-24 border-b border-white/[0.08]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <p class="font-mono text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-3">01 — Floor &amp; Zones</p>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase text-white leading-[1.02]">Four zones. One purpose: better training.</h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">Every zone is laid out so you can move from heavy lifting to sprints to recovery without waiting on equipment.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article class="group bg-navy-900 border border-white/[0.08] hover:border-cyan-500/40 rounded-2xl p-7 transition-colors">
+          <p class="font-mono text-xs text-gold-400 uppercase tracking-wider mb-3">Zone A</p>
+          <h3 class="font-display text-2xl font-extrabold uppercase text-white">Power Lifting Platforms</h3>
+          <p class="mt-3 text-slate-300 text-sm leading-relaxed">Calibrated Eleiko and Rogue power racks, bumper plates and platforms for squat, bench and deadlift sessions.</p>
+          <ul class="mt-5 space-y-2 text-sm text-slate-400">
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">▸</span>Power racks with safety pins</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">▸</span>Calibrated bumper plates</li>
+          </ul>
+        </article>
+
+        <article class="group bg-navy-900 border border-white/[0.08] hover:border-cyan-500/40 rounded-2xl p-7 transition-colors">
+          <p class="font-mono text-xs text-gold-400 uppercase tracking-wider mb-3">Zone B</p>
+          <h3 class="font-display text-2xl font-extrabold uppercase text-white">40 m Sled Turf Lane</h3>
+          <p class="mt-3 text-slate-300 text-sm leading-relaxed">A full-length turf lane for sled pushes, pulls, carries and sprint work, with room for group conditioning.</p>
+          <ul class="mt-5 space-y-2 text-sm text-slate-400">
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">▸</span>40-metre turf surface</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">▸</span>Sled push and pull stations</li>
+          </ul>
+        </article>
+
+        <article class="group bg-navy-900 border border-white/[0.08] hover:border-cyan-500/40 rounded-2xl p-7 transition-colors">
+          <p class="font-mono text-xs text-gold-400 uppercase tracking-wider mb-3">Zone C</p>
+          <h3 class="font-display text-2xl font-extrabold uppercase text-white">Concept2 Erg Bay</h3>
+          <p class="mt-3 text-slate-300 text-sm leading-relaxed">Concept2 rowers, bikes and skierg machines for interval engine work and steady-state sessions.</p>
+          <ul class="mt-5 space-y-2 text-sm text-slate-400">
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">▸</span>Rowing and bike ergometers</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">▸</span>Interval-ready layout</li>
+          </ul>
+        </article>
+
+        <article class="group bg-navy-900 border border-white/[0.08] hover:border-cyan-500/40 rounded-2xl p-7 transition-colors">
+          <p class="font-mono text-xs text-gold-400 uppercase tracking-wider mb-3">Zone D</p>
+          <h3 class="font-display text-2xl font-extrabold uppercase text-white">Mobility &amp; Recovery</h3>
+          <p class="mt-3 text-slate-300 text-sm leading-relaxed">A quiet space for mobility work, warm-ups and cool-downs, with a member lounge and body composition scanning.</p>
+          <ul class="mt-5 space-y-2 text-sm text-slate-400">
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">▸</span>Stretch and mobility area</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">▸</span>InBody composition scans</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. WEEKLY CLASS TIMETABLE ==================== -->
+  <section id="schedule" class="scroll-mt-24 bg-navy-900 py-20 lg:py-24 border-b border-white/[0.08]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+        <div class="max-w-2xl">
+          <p class="font-mono text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-3">02 — Class Timetable</p>
+          <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase text-white leading-[1.02]">The weekly coached schedule</h2>
+          <p class="mt-4 text-slate-300 leading-relaxed">Coached sessions run on the floor every week. Your 3-day pass includes one group session of your choice.</p>
+        </div>
+        <button type="button" data-open-booking data-title="Reserve a Class Spot" data-subtitle="Pick the session you want and we will confirm your place for your first visit." class="shrink-0 px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-bold text-sm tracking-wide transition-colors">
+          Reserve a Spot
+        </button>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-white/[0.08] bg-navy-950">
+        <table class="min-w-[820px] w-full text-sm">
+          <caption class="sr-only">Weekly coached class timetable, Monday to Sunday</caption>
+          <thead>
+            <tr class="border-b border-white/[0.08] bg-navy-900">
+              <th scope="col" class="px-4 py-4 text-left font-mono text-xs uppercase tracking-wider text-slate-400 w-24">Time</th>
+              <th scope="col" class="px-4 py-4 text-left font-mono text-xs uppercase tracking-wider text-slate-300">Mon</th>
+              <th scope="col" class="px-4 py-4 text-left font-mono text-xs uppercase tracking-wider text-slate-300">Tue</th>
+              <th scope="col" class="px-4 py-4 text-left font-mono text-xs uppercase tracking-wider text-slate-300">Wed</th>
+              <th scope="col" class="px-4 py-4 text-left font-mono text-xs uppercase tracking-wider text-slate-300">Thu</th>
+              <th scope="col" class="px-4 py-4 text-left font-mono text-xs uppercase tracking-wider text-slate-300">Fri</th>
+              <th scope="col" class="px-4 py-4 text-left font-mono text-xs uppercase tracking-wider text-slate-300">Sat</th>
+              <th scope="col" class="px-4 py-4 text-left font-mono text-xs uppercase tracking-wider text-slate-300">Sun</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/[0.06]">
+            <tr>
+              <th scope="row" class="px-4 py-4 text-left font-mono text-cyan-400 font-semibold align-top">06:00</th>
+              <td class="px-4 py-4 align-top text-white">Strength Foundations</td>
+              <td class="px-4 py-4 align-top text-white">Engine Intervals</td>
+              <td class="px-4 py-4 align-top text-white">Strength Foundations</td>
+              <td class="px-4 py-4 align-top text-white">Engine Intervals</td>
+              <td class="px-4 py-4 align-top text-white">Strength Foundations</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+            </tr>
+            <tr>
+              <th scope="row" class="px-4 py-4 text-left font-mono text-cyan-400 font-semibold align-top">09:00</th>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-white">Olympic Lifting</td>
+              <td class="px-4 py-4 align-top text-white">Strength Foundations</td>
+            </tr>
+            <tr>
+              <th scope="row" class="px-4 py-4 text-left font-mono text-cyan-400 font-semibold align-top">12:00</th>
+              <td class="px-4 py-4 align-top text-white">Mobility &amp; Recovery</td>
+              <td class="px-4 py-4 align-top text-white">Mobility &amp; Recovery</td>
+              <td class="px-4 py-4 align-top text-white">Mobility &amp; Recovery</td>
+              <td class="px-4 py-4 align-top text-white">Mobility &amp; Recovery</td>
+              <td class="px-4 py-4 align-top text-white">Mobility &amp; Recovery</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+            </tr>
+            <tr>
+              <th scope="row" class="px-4 py-4 text-left font-mono text-cyan-400 font-semibold align-top">18:00</th>
+              <td class="px-4 py-4 align-top text-white">Olympic Lifting</td>
+              <td class="px-4 py-4 align-top text-white">Sled &amp; Turf Conditioning</td>
+              <td class="px-4 py-4 align-top text-white">Olympic Lifting</td>
+              <td class="px-4 py-4 align-top text-white">Sled &amp; Turf Conditioning</td>
+              <td class="px-4 py-4 align-top text-white">Metcon Circuit</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+            </tr>
+            <tr>
+              <th scope="row" class="px-4 py-4 text-left font-mono text-cyan-400 font-semibold align-top">19:30</th>
+              <td class="px-4 py-4 align-top text-white">Metcon Circuit</td>
+              <td class="px-4 py-4 align-top text-white">Strength Foundations</td>
+              <td class="px-4 py-4 align-top text-white">Metcon Circuit</td>
+              <td class="px-4 py-4 align-top text-white">Strength Foundations</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+              <td class="px-4 py-4 align-top text-slate-600">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-xs text-slate-500">Timetable is subject to change. Check the front desk or member app for live spots before you arrive.</p>
+    </div>
+  </section>
+
+  <!-- ==================== 4. TDEE & MACRO CALCULATOR ==================== -->
+  <section id="calculator" class="scroll-mt-24 bg-navy-950 py-20 lg:py-24 border-b border-white/[0.08]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+        <div class="lg:col-span-5">
+          <p class="font-mono text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-3">03 — TDEE &amp; Macros</p>
+          <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase text-white leading-[1.02]">Know your numbers before you train</h2>
+          <p class="mt-4 text-slate-300 leading-relaxed">Estimate your daily energy needs and a starting macro split using the Mifflin-St Jeor equation. Nothing you enter is stored or sent anywhere.</p>
+          <p class="mt-4 text-xs text-slate-500 leading-relaxed">These are estimates for general fitness planning. For medical conditions or a specific diet, speak with a qualified professional.</p>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form id="calcForm" novalidate class="bg-navy-900 border border-white/[0.08] rounded-2xl p-6 sm:p-8 space-y-6">
+            <!-- Units -->
+            <fieldset>
+              <legend class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Units</legend>
+              <div class="inline-flex rounded-lg border border-white/[0.12] p-1 bg-navy-950">
+                <label class="cursor-pointer">
+                  <input type="radio" name="units" value="metric" checked class="peer sr-only" />
+                  <span class="block px-4 py-2 rounded-md text-sm font-semibold text-slate-400 peer-checked:bg-cyan-500 peer-checked:text-navy-950 peer-focus-visible:ring-2 peer-focus-visible:ring-cyan-400">Metric (cm, kg)</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="units" value="imperial" class="peer sr-only" />
+                  <span class="block px-4 py-2 rounded-md text-sm font-semibold text-slate-400 peer-checked:bg-cyan-500 peer-checked:text-navy-950 peer-focus-visible:ring-2 peer-focus-visible:ring-cyan-400">Imperial (ft, lb)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Sex & Age -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <fieldset>
+                <legend class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Sex</legend>
+                <div class="inline-flex rounded-lg border border-white/[0.12] p-1 bg-navy-950 w-full">
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="sex" value="male" checked class="peer sr-only" />
+                    <span class="block text-center px-4 py-2 rounded-md text-sm font-semibold text-slate-400 peer-checked:bg-cyan-500 peer-checked:text-navy-950 peer-focus-visible:ring-2 peer-focus-visible:ring-cyan-400">Male</span>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="sex" value="female" class="peer sr-only" />
+                    <span class="block text-center px-4 py-2 rounded-md text-sm font-semibold text-slate-400 peer-checked:bg-cyan-500 peer-checked:text-navy-950 peer-focus-visible:ring-2 peer-focus-visible:ring-cyan-400">Female</span>
+                  </label>
+                </div>
+              </fieldset>
+              <div>
+                <label for="age" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Age (years)</label>
+                <input id="age" name="age" type="number" inputmode="numeric" min="15" max="100" step="1" placeholder="30" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none" aria-describedby="ageHelp" />
+                <p id="ageHelp" class="sr-only">Enter an age between 15 and 100.</p>
+              </div>
+            </div>
+
+            <!-- Metric inputs -->
+            <div data-unit="metric" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="heightCm" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Height (cm)</label>
+                <input id="heightCm" name="heightCm" type="number" inputmode="decimal" min="120" max="230" step="0.1" placeholder="178" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none" />
+              </div>
+              <div>
+                <label for="weightKg" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Weight (kg)</label>
+                <input id="weightKg" name="weightKg" type="number" inputmode="decimal" min="35" max="250" step="0.1" placeholder="82" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none" />
+              </div>
+            </div>
+
+            <!-- Imperial inputs -->
+            <div data-unit="imperial" class="hidden grid-cols-1 sm:grid-cols-3 gap-6">
+              <div>
+                <label for="heightFt" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Height (ft)</label>
+                <input id="heightFt" name="heightFt" type="number" inputmode="numeric" min="4" max="7" step="1" placeholder="5" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none" />
+              </div>
+              <div>
+                <label for="heightIn" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Height (in)</label>
+                <input id="heightIn" name="heightIn" type="number" inputmode="numeric" min="0" max="11" step="0.5" placeholder="10" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none" />
+              </div>
+              <div>
+                <label for="weightLb" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Weight (lb)</label>
+                <input id="weightLb" name="weightLb" type="number" inputmode="decimal" min="80" max="550" step="0.1" placeholder="180" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none" />
+              </div>
+            </div>
+
+            <!-- Activity & Goal -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="activity" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Activity level</label>
+                <select id="activity" name="activity" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none">
+                  <option value="1.2">Sedentary (little or no exercise)</option>
+                  <option value="1.375">Light (1–3 days a week)</option>
+                  <option value="1.55" selected>Moderate (3–5 days a week)</option>
+                  <option value="1.725">Heavy (6–7 days a week)</option>
+                  <option value="1.9">Athlete (training twice a day)</option>
+                </select>
+              </div>
+              <div>
+                <label for="goal" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Goal</label>
+                <select id="goal" name="goal" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none">
+                  <option value="lose">Lose fat (−500 kcal/day)</option>
+                  <option value="maintain" selected>Maintain weight</option>
+                  <option value="gain">Build muscle (+300 kcal/day)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+              <button type="submit" class="px-7 py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-extrabold text-sm tracking-wide transition-colors shadow-lg shadow-cyan-500/20">Calculate My Numbers</button>
+              <p id="calcError" class="text-sm text-red-400" role="alert"></p>
+            </div>
+
+            <!-- Results -->
+            <div id="calcResults" class="hidden border-t border-white/[0.08] pt-6" aria-live="polite">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-navy-950 border border-white/[0.08] rounded-xl p-4">
+                  <p class="text-xs font-mono uppercase tracking-wider text-slate-400">BMR (rest)</p>
+                  <p class="mt-1 font-display text-3xl font-extrabold text-white"><span id="resBmr">—</span> <span class="text-sm font-sans font-semibold text-slate-400">kcal</span></p>
+                </div>
+                <div class="bg-navy-950 border border-white/[0.08] rounded-xl p-4">
+                  <p class="text-xs font-mono uppercase tracking-wider text-slate-400">TDEE (maintenance)</p>
+                  <p class="mt-1 font-display text-3xl font-extrabold text-white"><span id="resTdee">—</span> <span class="text-sm font-sans font-semibold text-slate-400">kcal</span></p>
+                </div>
+                <div class="col-span-2 bg-navy-950 border border-cyan-500/30 rounded-xl p-4">
+                  <p class="text-xs font-mono uppercase tracking-wider text-cyan-400">Daily target</p>
+                  <p class="mt-1 font-display text-4xl font-extrabold text-cyan-400"><span id="resTarget">—</span> <span class="text-sm font-sans font-semibold text-slate-400">kcal / day</span></p>
+                </div>
+              </div>
+
+              <div class="mt-4 grid grid-cols-3 gap-4 text-center">
+                <div class="bg-navy-950 border border-white/[0.08] rounded-xl p-4">
+                  <p class="text-xs font-mono uppercase tracking-wider text-slate-400">Protein</p>
+                  <p class="mt-1 font-display text-2xl font-bold text-white"><span id="resProtein">—</span> g</p>
+                </div>
+                <div class="bg-navy-950 border border-white/[0.08] rounded-xl p-4">
+                  <p class="text-xs font-mono uppercase tracking-wider text-slate-400">Carbs</p>
+                  <p class="mt-1 font-display text-2xl font-bold text-white"><span id="resCarbs">—</span> g</p>
+                </div>
+                <div class="bg-navy-950 border border-white/[0.08] rounded-xl p-4">
+                  <p class="text-xs font-mono uppercase tracking-wider text-slate-400">Fat</p>
+                  <p class="mt-1 font-display text-2xl font-bold text-white"><span id="resFat">—</span> g</p>
+                </div>
+              </div>
+              <p id="resNote" class="mt-4 text-xs text-slate-400 leading-relaxed"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. COACHING ROSTER ==================== -->
+  <section id="coaches" class="scroll-mt-24 bg-navy-900 py-20 lg:py-24 border-b border-white/[0.08]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <p class="font-mono text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-3">04 — Coaches</p>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase text-white leading-[1.02]">Coaches who program, not just supervise</h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">Every coach holds a current CSCS certification and works from a written plan. Ask for a progress review at any time.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="bg-navy-950 border border-white/[0.08] rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-navy-900 border border-cyan-500/40 flex items-center justify-center font-display text-2xl font-extrabold text-cyan-400" aria-hidden="true">S</div>
+          <h3 class="mt-5 font-display text-xl font-extrabold uppercase text-white">Head of Strength</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Leads the power and strength programming for lifters at every level.</p>
+          <p class="mt-4 font-mono text-[11px] uppercase tracking-wider text-gold-400">CSCS · Strength Coach</p>
+        </article>
+        <article class="bg-navy-950 border border-white/[0.08] rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-navy-900 border border-cyan-500/40 flex items-center justify-center font-display text-2xl font-extrabold text-cyan-400" aria-hidden="true">O</div>
+          <h3 class="mt-5 font-display text-xl font-extrabold uppercase text-white">Olympic Lifting Coach</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Teaches the snatch, clean and jerk with a focus on technique before load.</p>
+          <p class="mt-4 font-mono text-[11px] uppercase tracking-wider text-gold-400">CSCS · Weightlifting</p>
+        </article>
+        <article class="bg-navy-950 border border-white/[0.08] rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-navy-900 border border-cyan-500/40 flex items-center justify-center font-display text-2xl font-extrabold text-cyan-400" aria-hidden="true">C</div>
+          <h3 class="mt-5 font-display text-xl font-extrabold uppercase text-white">Conditioning Coach</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Runs the sled, erg and metcon sessions with clear intensity targets.</p>
+          <p class="mt-4 font-mono text-[11px] uppercase tracking-wider text-gold-400">CSCS · Conditioning</p>
+        </article>
+        <article class="bg-navy-950 border border-white/[0.08] rounded-2xl p-6">
+          <div class="w-14 h-14 rounded-xl bg-navy-900 border border-cyan-500/40 flex items-center justify-center font-display text-2xl font-extrabold text-cyan-400" aria-hidden="true">M</div>
+          <h3 class="mt-5 font-display text-xl font-extrabold uppercase text-white">Mobility &amp; Recovery Lead</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Builds warm-ups and recovery work around the lifts you are training.</p>
+          <p class="mt-4 font-mono text-[11px] uppercase tracking-wider text-gold-400">CSCS · Mobility</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. MEMBERSHIPS / PRICING ==================== -->
+  <section id="pricing" class="scroll-mt-24 bg-navy-950 py-20 lg:py-24 border-b border-white/[0.08]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <p class="font-mono text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-3">05 — Memberships</p>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase text-white leading-[1.02]">Start free. Stay because it works.</h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">Try the floor for three days at no cost. The $0 initiation fee applies to every membership through Sunday.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <!-- Trial -->
+        <article class="flex flex-col bg-navy-900 border border-white/[0.08] rounded-2xl p-7">
+          <p class="font-mono text-xs uppercase tracking-wider text-slate-400">Try it first</p>
+          <h3 class="mt-2 font-display text-2xl font-extrabold uppercase text-white">3-Day Pass</h3>
+          <p class="mt-4 font-display text-5xl font-extrabold text-white">$0</p>
+          <p class="text-sm text-slate-400">3 consecutive days</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300 flex-1">
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Full floor and turf access</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>InBody composition scan</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>One group session</li>
+          </ul>
+          <button type="button" data-open-booking data-title="3-Day All-Access Club Pass" data-subtitle="Full floor access, complimentary InBody composition scan, and 1 group session." class="mt-8 w-full py-3 rounded-lg bg-navy-950 hover:bg-navy-800 border border-white/[0.12] hover:border-cyan-500/40 text-white font-bold text-sm transition-colors">Claim Free Pass</button>
+        </article>
+
+        <!-- Core -->
+        <article class="flex flex-col bg-navy-900 border border-white/[0.08] rounded-2xl p-7">
+          <p class="font-mono text-xs uppercase tracking-wider text-slate-400">Consistent training</p>
+          <h3 class="mt-2 font-display text-2xl font-extrabold uppercase text-white">Core</h3>
+          <p class="mt-4 font-display text-5xl font-extrabold text-white">$89<span class="text-base font-sans font-semibold text-slate-400"> /mo</span></p>
+          <p class="text-sm text-slate-400">Open floor, standard classes</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300 flex-1">
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Open floor access</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Standard group classes</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Free member parking</li>
+          </ul>
+          <button type="button" data-open-booking data-title="Start Core Membership" data-subtitle="Tell us a little about your training and a coach will confirm your start date and plan details." class="mt-8 w-full py-3 rounded-lg bg-navy-950 hover:bg-navy-800 border border-white/[0.12] hover:border-cyan-500/40 text-white font-bold text-sm transition-colors">Choose Core</button>
+        </article>
+
+        <!-- Pro (featured) -->
+        <article class="relative flex flex-col bg-navy-900 border-2 border-cyan-500 rounded-2xl p-7 shadow-xl shadow-cyan-500/10">
+          <span class="absolute -top-3 left-7 px-3 py-1 rounded-md bg-gold-400 text-navy-950 font-mono text-[10px] font-bold uppercase tracking-wider">Most chosen</span>
+          <p class="font-mono text-xs uppercase tracking-wider text-cyan-400">Serious lifters</p>
+          <h3 class="mt-2 font-display text-2xl font-extrabold uppercase text-white">Pro</h3>
+          <p class="mt-4 font-display text-5xl font-extrabold text-white">$129<span class="text-base font-sans font-semibold text-slate-400"> /mo</span></p>
+          <p class="text-sm text-slate-400">Everything in Core, plus</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300 flex-1">
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Unlimited coached classes</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Written strength program</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Quarterly InBody scans</li>
+          </ul>
+          <button type="button" data-open-booking data-title="Start Pro Membership" data-subtitle="Tell us your goals and a coach will confirm your program and start date." class="mt-8 w-full py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-extrabold text-sm transition-colors shadow-lg shadow-cyan-500/20">Choose Pro</button>
+        </article>
+
+        <!-- Athlete -->
+        <article class="flex flex-col bg-navy-900 border border-white/[0.08] rounded-2xl p-7">
+          <p class="font-mono text-xs uppercase tracking-wider text-slate-400">Competitive athletes</p>
+          <h3 class="mt-2 font-display text-2xl font-extrabold uppercase text-white">Athlete</h3>
+          <p class="mt-4 font-display text-5xl font-extrabold text-white">$179<span class="text-base font-sans font-semibold text-slate-400"> /mo</span></p>
+          <p class="text-sm text-slate-400">Everything in Pro, plus</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300 flex-1">
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Private coaching sessions</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Sport-specific programming</li>
+            <li class="flex gap-2"><span class="text-cyan-400" aria-hidden="true">✓</span>Priority turf and rack booking</li>
+          </ul>
+          <button type="button" data-open-booking data-title="Start Athlete Membership" data-subtitle="Tell us your sport and season and a coach will get back to you about private sessions." class="mt-8 w-full py-3 rounded-lg bg-navy-950 hover:bg-navy-800 border border-white/[0.12] hover:border-cyan-500/40 text-white font-bold text-sm transition-colors">Choose Athlete</button>
+        </article>
+      </div>
+      <p class="mt-8 text-xs text-slate-500">Prices shown in USD before applicable taxes. Membership terms are explained at sign-up.</p>
+    </div>
+  </section>
+
+  <!-- ==================== 7. FAQ ==================== -->
+  <section id="faq" class="scroll-mt-24 bg-navy-900 py-20 lg:py-24 border-b border-white/[0.08]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <p class="font-mono text-xs font-bold text-cyan-400 uppercase tracking-[0.2em] mb-3">06 — FAQ</p>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase text-white leading-[1.02]">Questions before you walk in</h2>
+      </div>
+
+      <div class="space-y-3">
+        <details class="group bg-navy-950 border border-white/[0.08] rounded-xl open:border-cyan-500/40">
+          <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5 font-bold text-white">
+            <span>Do I need lifting experience to join?</span>
+            <span class="text-cyan-400 transition-transform group-open:rotate-45 text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed">No. Strength Foundations is built for beginners and covers the squat, hinge, press and pull with a coach watching your form. Experienced lifters can start in any class.</div>
+        </details>
+
+        <details class="group bg-navy-950 border border-white/[0.08] rounded-xl open:border-cyan-500/40">
+          <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5 font-bold text-white">
+            <span>What is included in the 3-day pass?</span>
+            <span class="text-cyan-400 transition-transform group-open:rotate-45 text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed">Full floor access to the lifting platforms, sled turf and erg bay, a complimentary InBody composition scan, and one group session during the three days.</div>
+        </details>
+
+        <details class="group bg-navy-950 border border-white/[0.08] rounded-xl open:border-cyan-500/40">
+          <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5 font-bold text-white">
+            <span>Is there a joining fee?</span>
+            <span class="text-cyan-400 transition-transform group-open:rotate-45 text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed">Initiation is $0 through Sunday for new members. Membership prices are listed in the Memberships section above.</div>
+        </details>
+
+        <details class="group bg-navy-950 border border-white/[0.08] rounded-xl open:border-cyan-500/40">
+          <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5 font-bold text-white">
+            <span>Can I cancel my membership?</span>
+            <span class="text-cyan-400 transition-transform group-open:rotate-45 text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed">Membership terms, including notice periods and cancellation steps, are explained at sign-up. Ask the front desk for a copy before you commit.</div>
+        </details>
+
+        <details class="group bg-navy-950 border border-white/[0.08] rounded-xl open:border-cyan-500/40">
+          <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5 font-bold text-white">
+            <span>Is there parking?</span>
+            <span class="text-cyan-400 transition-transform group-open:rotate-45 text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed">Yes. Member parking is free on site at 742 Mercer Industrial Way.</div>
+        </details>
+
+        <details class="group bg-navy-950 border border-white/[0.08] rounded-xl open:border-cyan-500/40">
+          <summary class="cursor-pointer list-none flex items-center justify-between gap-4 px-6 py-5 font-bold text-white">
+            <span>What are the opening hours?</span>
+            <span class="text-cyan-400 transition-transform group-open:rotate-45 text-xl leading-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="px-6 pb-5 text-sm text-slate-300 leading-relaxed">The club is open from 05:00 to 23:00. Coached classes follow the timetable above, and the live status in the top bar shows whether we are open right now.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. FINAL CALL TO ACTION ==================== -->
+  <section class="relative bg-navy-950 bg-grid-pattern py-20 lg:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.06] via-transparent to-gold-500/[0.05] pointer-events-none" aria-hidden="true"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl sm:text-6xl font-extrabold uppercase text-white leading-[0.98]">Train with intent.<br /><span class="text-cyan-400">Start this week.</span></h2>
+      <p class="mt-6 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">Your 3-day pass is free, comes with no obligation, and includes a coach-led session.</p>
+      <button type="button" data-open-booking data-title="3-Day All-Access Club Pass" data-subtitle="Experience the floor during peak or off-peak hours with zero obligation." class="mt-8 px-8 py-4 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-extrabold text-base tracking-wide transition-all shadow-xl shadow-cyan-500/20 active:scale-[0.98]">
+        Claim Your 3-Day Free Pass
+      </button>
+    </div>
+  </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-navy-900 border-t border-white/[0.08]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div>
+        <p class="font-display text-2xl font-extrabold tracking-tight text-white uppercase">BLUEPEAK<span class="text-cyan-400">.</span></p>
+        <p class="font-mono text-[10px] tracking-[0.22em] text-slate-400 uppercase mt-1">STRENGTH &amp; CONDITIONING</p>
+        <p class="mt-4 text-sm text-slate-400 leading-relaxed max-w-xs">Serious iron, measured progress, and coaching built for lifters and everyday athletes.</p>
+      </div>
+      <div>
+        <p class="font-mono text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Visit</p>
+        <address class="not-italic text-sm text-slate-300 leading-relaxed">
+          742 Mercer Industrial Way<br />North District<br />
+          <a href="tel:+15552398840" class="hover:text-cyan-400 transition-colors">+1 (555) 239-8840</a><br />
+          Open daily 05:00 – 23:00
+        </address>
+      </div>
+      <div>
+        <p class="font-mono text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Explore</p>
+        <ul class="grid grid-cols-2 gap-y-2 text-sm text-slate-300">
+          <li><a href="#floor-zones" class="hover:text-cyan-400 transition-colors">Floor &amp; Zones</a></li>
+          <li><a href="#schedule" class="hover:text-cyan-400 transition-colors">Timetable</a></li>
+          <li><a href="#calculator" class="hover:text-cyan-400 transition-colors">TDEE &amp; Macros</a></li>
+          <li><a href="#coaches" class="hover:text-cyan-400 transition-colors">Coaches</a></li>
+          <li><a href="#pricing" class="hover:text-cyan-400 transition-colors">Memberships</a></li>
+          <li><a href="#faq" class="hover:text-cyan-400 transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/[0.08]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+        <p>© <span id="year">2026</span> BluePeak Fitness. All rights reserved.</p>
+        <p>Fitness estimates on this page are for general planning only.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOOKING / LEAD CAPTURE MODAL ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="bookingTitle" aria-describedby="bookingSubtitle">
+    <div data-modal-close class="absolute inset-0 bg-navy-950/85 backdrop-blur-sm"></div>
+    <div class="relative min-h-full flex items-center justify-center p-4 pointer-events-none">
+      <div class="pointer-events-auto relative w-full max-w-lg max-h-[92vh] overflow-y-auto bg-navy-900 border border-white/[0.1] rounded-2xl shadow-2xl shadow-black/60">
+        <div class="flex items-start justify-between gap-4 p-6 pb-5 border-b border-white/[0.08]">
+          <div class="min-w-0">
+            <p class="font-mono text-xs font-bold text-gold-400 uppercase tracking-wider">Free · No obligation</p>
+            <h2 id="bookingTitle" class="font-display text-3xl font-extrabold uppercase text-white mt-1 leading-tight">Claim Your Free Pass</h2>
+            <p id="bookingSubtitle" class="text-sm text-slate-300 mt-2 leading-relaxed"></p>
+          </div>
+          <button type="button" data-modal-close aria-label="Close dialog" class="shrink-0 p-2 rounded-lg text-slate-400 hover:text-white hover:bg-navy-800 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Form state -->
+        <div id="bookingFormWrap" class="p-6">
+          <form id="bookingForm" novalidate class="space-y-5">
+            <div>
+              <label for="fullName" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Full name</label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none aria-[invalid=true]:border-red-400" aria-describedby="err-fullName" />
+              <p id="err-fullName" class="hidden mt-1.5 text-xs text-red-400"></p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="email" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none aria-[invalid=true]:border-red-400" aria-describedby="err-email" />
+                <p id="err-email" class="hidden mt-1.5 text-xs text-red-400"></p>
+              </div>
+              <div>
+                <label for="phone" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none aria-[invalid=true]:border-red-400" aria-describedby="err-phone" />
+                <p id="err-phone" class="hidden mt-1.5 text-xs text-red-400"></p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="leadGoal" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Main goal</label>
+                <select id="leadGoal" name="goal" required class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none aria-[invalid=true]:border-red-400" aria-describedby="err-leadGoal">
+                  <option value="">Select a goal</option>
+                  <option value="strength">Build strength</option>
+                  <option value="olympic">Olympic lifting</option>
+                  <option value="conditioning">Conditioning &amp; endurance</option>
+                  <option value="general">General fitness</option>
+                  <option value="unsure">Not sure yet</option>
+                </select>
+                <p id="err-leadGoal" class="hidden mt-1.5 text-xs text-red-400"></p>
+              </div>
+              <div>
+                <label for="visitTime" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Preferred time</label>
+                <select id="visitTime" name="visitTime" class="w-full bg-navy-950 border border-white/[0.12] focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-lg px-4 py-2.5 text-white outline-none">
+                  <option value="morning">Morning</option>
+                  <option value="midday">Midday</option>
+                  <option value="evening" selected>Evening</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input id="consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 rounded border-white/[0.2] bg-navy-950 text-cyan-500 focus:ring-cyan-400" aria-describedby="err-consent" />
+                <span class="text-xs text-slate-300 leading-relaxed">I agree that BluePeak Fitness may contact me by phone or email about my pass or membership.</span>
+              </label>
+              <p id="err-consent" class="hidden mt-1.5 text-xs text-red-400"></p>
+            </div>
+
+            <!-- Honeypot: hidden from people, often filled in by bots -->
+            <div class="hidden" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <p id="bookingStatus" class="hidden text-sm rounded-lg px-4 py-3" role="status"></p>
+
+            <button id="bookingSubmit" type="submit" class="w-full py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 disabled:opacity-60 disabled:cursor-not-allowed text-navy-950 font-extrabold text-sm tracking-wide transition-colors">
+              Request My Pass
+            </button>
+            <p class="text-center text-xs text-slate-500">Prefer to talk it through? Call <a href="tel:+15552398840" class="text-cyan-400 hover:underline">+1 (555) 239-8840</a>.</p>
+          </form>
+        </div>
+
+        <!-- Success state -->
+        <div id="bookingSuccess" class="hidden p-8 text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-cyan-500/15 border border-cyan-500/40 flex items-center justify-center" aria-hidden="true">
+            <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3 class="mt-5 font-display text-2xl font-extrabold uppercase text-white">You are on the list</h3>
+          <p class="mt-2 text-sm text-slate-300 leading-relaxed">We will reach out shortly to confirm your pass and first session time.</p>
+          <button type="button" data-modal-close class="mt-6 px-6 py-3 rounded-lg bg-navy-800 hover:bg-navy-700 text-white font-bold text-sm transition-colors">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

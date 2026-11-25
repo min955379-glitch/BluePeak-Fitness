@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BluePeak Fitness | Strength &amp; Conditioning — Jinnahabad, Abbottabad</title>
+  <meta name="description" content="BluePeak Fitness in Jinnahabad, Abbottabad. Calibrated Eleiko plates, Rogue power racks, dedicated Ladies-Only block, technical boxing, and S&C coaching." />
+  
+  <!-- Google Fonts: Space Grotesk, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#0B1120', // Primary Midnight Navy Background
+              900: '#111827', // Elevated Card Surface 1
+              800: '#1E293B', // Elevated Card Surface 2
+              700: '#334155', // Hover / Divider Accent
+            },
+            cyan: {
+              400: '#22D3EE',
+              500: '#06B6D4', // Primary Interactive Accent
+              600: '#0891B2', // Hover State
+            },
+            gold: {
+              400: '#FBBF24',
+              500: '#EAB308', // VIP / Featured Accent
+              600: '#D97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0B1120;
+      color: #F8FAFC;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Crisp subtle border token */
+    .border-subtle {
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    /* Precision architectural background grid */
+    .bg-precision-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    /* Hide scrollbars cleanly for horizontal tab strips */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Dedicated Print Stylesheet for Digital Guest Pass */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #printableGuestPass, #printableGuestPass * {
+        visibility: visible;
+      }
+      #printableGuestPass {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #0B1120 !important;
+        color: #F8FAFC !important;
+        border: 2px solid #06B6D4 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body class="bg-navy-950 text-slate-50 antialiased selection:bg-cyan-500 selection:text-navy-950 overflow-x-hidden">
+
+  <!-- ELECTRIC CYAN TOAST NOTIFICATION (STRICTLY ZERO GREEN) -->
+  <div id="toastBanner" role="status" aria-live="polite" class="fixed top-24 right-5 z-50 hidden items-center gap-3 px-4 py-3 rounded-xl bg-navy-900 border border-cyan-500/70 shadow-2xl shadow-cyan-500/20 text-sm text-white transition-all">
+    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shrink-0"></span>
+    <span id="toastMessage" class="font-medium">Copied to clipboard</span>
+  </div>
+
+  <!-- 1. STICKY GLASSMORPHIC NAVIGATION -->
+  <header class="sticky top-0 z-40 w-full bg-navy-950/85 backdrop-blur-xl border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Custom SVG Brand Mark -->
+        <a href="#" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-10 h-10 rounded-xl bg-navy-900 border border-cyan-500/40 flex items-center justify-center shadow-lg shadow-cyan-500/10 group-hover:border-cyan-400 transition-colors">
+            <svg viewBox="0 0 32 32" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 24L13 8L19 18L23 12L28 24H4Z" stroke="#06B6D4" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M13 8L16.5 14L13 16.5L9.5 14L13 8Z" fill="#EAB308"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-white leading-none">
+              BLUE<span class="text-cyan-500">PEAK</span>
+            </span>
+            <span class="font-mono text-[10px] font-semibold tracking-[0.22em] text-gold-500 uppercase mt-1">
+              ABBOTTABAD
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-7">
+          <a href="#programs" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">Programs</a>
+          <a href="#schedule" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">Schedule</a>
+          <a href="#calculator" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">Macro Lab</a>
+          <a href="#memberships" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">Memberships</a>
+          <a href="#trainers" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">Coaches</a>
+          <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">FAQ</a>
+          <a href="#location" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">Location</a>
+        </nav>
+
+        <!-- Primary CTA & Mobile Drawer Toggle -->
+        <div class="flex items-center gap-3">
+          <button onclick="openBookingModal({ mode: 'trial', title: '3-Day All-Access Free Pass' })" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-sm transition-all shadow-lg shadow-cyan-500/20 active:scale-95">
+            <span>Claim 3-Day Free Pass</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="mobileMenuBtn" onclick="toggleMobileDrawer()" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-navy-900 border border-subtle text-slate-200 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors">
+            <i id="mobileMenuIcon" data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Drawer -->
+    <div id="mobileDrawer" class="hidden lg:hidden bg-navy-900/95 backdrop-blur-xl border-b border-subtle px-4 pt-3 pb-6 space-y-1.5">
+      <a href="#programs" onclick="closeMobileDrawer()" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400 transition-colors">Training Programs</a>
+      <a href="#schedule" onclick="closeMobileDrawer()" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400 transition-colors">Weekly Class Schedule</a>
+      <a href="#calculator" onclick="closeMobileDrawer()" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400 transition-colors">Macro &amp; BMI Calculator</a>
+      <a href="#memberships" onclick="closeMobileDrawer()" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400 transition-colors">Membership Plans</a>
+      <a href="#trainers" onclick="closeMobileDrawer()" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400 transition-colors">Coaching Staff</a>
+      <a href="#faq" onclick="closeMobileDrawer()" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400 transition-colors">Member FAQ</a>
+      <a href="#location" onclick="closeMobileDrawer()" class="block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-navy-800 hover:text-cyan-400 transition-colors">Location &amp; Hours</a>
+      <div class="pt-3">
+        <button onclick="closeMobileDrawer(); openBookingModal({ mode: 'trial', title: '3-Day All-Access Free Pass' });" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-sm shadow-lg shadow-cyan-500/20">
+          Claim 3-Day Free Pass
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="relative overflow-hidden bg-navy-950 pt-10 pb-16 lg:pt-20 lg:pb-24 border-b border-subtle">
+    <!-- Atmospheric Dark Strength Floor Backdrop -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80" 
+        alt="BluePeak Fitness Strength Floor in Abbottabad" 
+        onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/0B1120/1E293B?text=BLUEPEAK+FITNESS+FLOOR';"
+        class="w-full h-full object-cover object-center opacity-25"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-950/65"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/80"></div>
+      <div class="absolute inset-0 bg-precision-grid"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Column: Real-Time Status + Value Proposition -->
+        <div class="lg:col-span-7 space-y-7">
+          <!-- Real-Time JavaScript-Driven Gym Floor Status Badge (Electric Cyan Pulse) -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-navy-900/90 backdrop-blur-md border border-cyan-500/40 font-mono text-xs font-semibold uppercase tracking-wider text-cyan-400 shadow-lg">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
+            </span>
+            <span id="liveFloorStatusText">OPEN NOW • CHECKING FLOOR TELEMETRY...</span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.06]">
+            Calibrated Iron. <br/>
+            <span class="text-cyan-400">Disciplined Coaching.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+            Abbottabad’s dedicated strength and conditioning facility on Main Mansehra Road, Jinnahabad. Train with competition Eleiko calibrated plates, Rogue Monster Lite power racks, Concept2 ergometers, and a private daily Ladies-Only training block.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-1">
+            <button onclick="openBookingModal({ mode: 'trial', title: '3-Day All-Access Free Pass' })" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-base transition-all shadow-xl shadow-cyan-500/25 active:scale-95">
+              <span>Claim 3-Day Free Pass</span>
+              <i data-lucide="ticket" class="w-5 h-5"></i>
+            </button>
+            <a href="#memberships" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-navy-900/90 hover:bg-navy-800 text-white font-semibold text-base border border-subtle hover:border-gold-500/50 transition-all">
+              <span>Explore Memberships</span>
+              <i data-lucide="arrow-down-right" class="w-5 h-5 text-gold-500"></i>
+            </a>
+          </div>
+
+          <!-- Facility Telemetry Bar -->
+          <div class="pt-4 grid grid-cols-3 gap-4 border-t border-subtle max-w-xl">
+            <div>
+              <div class="font-mono text-xl sm:text-2xl font-bold text-white">14,500</div>
+              <div class="text-xs text-slate-400 mt-0.5">Sq. Ft. Training Floor</div>
+            </div>
+            <div>
+              <div class="font-mono text-xl sm:text-2xl font-bold text-cyan-400">11 AM–3 PM</div>
+              <div class="text-xs text-slate-400 mt-0.5">Private Ladies Block</div>
+            </div>
+            <div>
+              <div class="font-mono text-xl sm:text-2xl font-bold text-gold-500">0 PKR</div>
+              <div class="text-xs text-slate-400 mt-0.5">Joining Fee on Annual</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Architectural Facility Card -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-navy-900/90 backdrop-blur-xl border border-subtle p-6 shadow-2xl space-y-6">
+            <div class="relative h-56 sm:h-64 rounded-xl overflow-hidden border border-subtle">
+              <img 
+                src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" 
+                alt="Rogue Power Racks and Eleiko Calibrated Plates at BluePeak Fitness" 
+                onerror="this.onerror=null; this.src='https://placehold.co/800x500/111827/06B6D4?text=ROGUE+%26+ELEIKO+FLOOR';"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent"></div>
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-navy-950/90 border border-gold-500/40 font-mono text-[11px] font-semibold text-gold-400 uppercase">
+                Al-Falah Plaza • Jinnahabad
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <div class="font-display text-lg font-bold text-white">Main Barbell &amp; Platform Bay</div>
+                <div class="text-xs text-slate-300 mt-0.5">6 Rogue Power Racks • Competition Deadlift Platforms • Wattbike Atom</div>
+              </div>
+            </div>
+
+            <!-- Live Zone Occupancy Breakdown -->
+            <div class="space-y-3">
+              <div class="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider">
+                <span class="text-slate-400">Current Zone Load</span>
+                <span id="localTimeTelemetry" class="text-cyan-400">LIVE</span>
+              </div>
+              <div class="grid grid-cols-3 gap-3">
+                <div class="p-3 rounded-xl bg-navy-950 border border-subtle">
+                  <div class="text-[11px] text-slate-400">Barbell Racks</div>
+                  <div class="font-mono text-base font-bold text-white mt-0.5">5 / 6 Free</div>
+                  <div class="w-full h-1.5 rounded-full bg-navy-800 mt-2 overflow-hidden">
+                    <div class="h-full bg-cyan-500 rounded-full" style="width: 24%"></div>
+                  </div>
+                </div>
+                <div class="p-3 rounded-xl bg-navy-950 border border-subtle">
+                  <div class="text-[11px] text-slate-400">Concept2 Bay</div>
+                  <div class="font-mono text-base font-bold text-cyan-400 mt-0.5">Open</div>
+                  <div class="w-full h-1.5 rounded-full bg-navy-800 mt-2 overflow-hidden">
+                    <div class="h-full bg-cyan-500 rounded-full" style="width: 35%"></div>
+                  </div>
+                </div>
+                <div class="p-3 rounded-xl bg-navy-950 border border-subtle">
+                  <div class="text-[11px] text-slate-400">Boxing Studio</div>
+                  <div class="font-mono text-base font-bold text-gold-500 mt-0.5">12 Bags</div>
+                  <div class="w-full h-1.5 rounded-full bg-navy-800 mt-2 overflow-hidden">
+                    <div class="h-full bg-gold-500 rounded-full" style="width: 48%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROGRAMS OVERVIEW & MEMBER TRANSFORMATIONS -->
+  <section id="programs" class="py-20 bg-navy-950 border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      
+      <!-- 4 Training Discipline Cards -->
+      <div>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">Structured Training Blocks</span>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2">
+              Four Core <span class="text-gold-500">Training Disciplines</span>
+            </h2>
+          </div>
+          <p class="text-slate-400 max-w-md text-sm sm:text-base">
+            Every session follows a 6-week progressive training block. Click <span class="text-cyan-400 font-semibold">View Classes</span> on any discipline to inspect its live timetable.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1: Hypertrophy & Powerlifting -->
+          <article class="group rounded-2xl bg-navy-900 border border-subtle hover:border-cyan-500/60 overflow-hidden flex flex-col justify-between transition-all duration-300">
+            <div>
+              <div class="relative h-48 overflow-hidden bg-navy-800">
+                <img 
+                  src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80" 
+                  alt="Hypertrophy and Powerlifting at BluePeak Fitness" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/800x450/111827/06B6D4?text=HYPERTROPHY+%26+POWERLIFTING';"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/35 to-transparent"></div>
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-navy-950/90 border border-cyan-500/40 font-mono text-[11px] font-semibold text-cyan-400">
+                  60 MIN • ZONE A
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold text-white">Hypertrophy &amp; Powerlifting</h3>
+                <p class="text-sm text-slate-400 mt-2.5 leading-relaxed">
+                  Progressive barbell cycles built around low-bar squats, competition bench press, and conventional deadlifts using Rogue power racks and Eleiko calibrated kilo plates.
+                </p>
+                <div class="mt-4 pt-3 border-t border-subtle flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 rounded bg-navy-800 text-[11px] font-mono text-slate-300">Eleiko Plates</span>
+                  <span class="px-2 py-0.5 rounded bg-navy-800 text-[11px] font-mono text-slate-300">Rogue Racks</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6">
+              <button onclick="filterScheduleAndScroll('Strength')" class="w-full py-2.5 px-4 rounded-xl bg-navy-800 hover:bg-cyan-500 text-cyan-400 hover:text-navy-950 font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                <span>View Classes</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2: Metabolic Conditioning / HIIT -->
+          <article class="group rounded-2xl bg-navy-900 border border-subtle hover:border-cyan-500/60 overflow-hidden flex flex-col justify-between transition-all duration-300">
+            <div>
+              <div class="relative h-48 overflow-hidden bg-navy-800">
+                <img 
+                  src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80" 
+                  alt="Metabolic Conditioning and HIIT Turf" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/800x450/111827/EAB308?text=METCON+%26+HIIT';"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/35 to-transparent"></div>
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-navy-950/90 border border-gold-500/40 font-mono text-[11px] font-semibold text-gold-400">
+                  45 MIN • ZONE B
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold text-white">Metabolic Conditioning / HIIT</h3>
+                <p class="text-sm text-slate-400 mt-2.5 leading-relaxed">
+                  High-output anaerobic intervals pairing Concept2 RowErgs, Wattbike Atom sprints, weighted turf sled pushes, and kettlebell complexes for aerobic capacity.
+                </p>
+                <div class="mt-4 pt-3 border-t border-subtle flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 rounded bg-navy-800 text-[11px] font-mono text-slate-300">Concept2 Ergs</span>
+                  <span class="px-2 py-0.5 rounded bg-navy-800 text-[11px] font-mono text-slate-300">Wattbike Atom</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6">
+              <button onclick="filterScheduleAndScroll('HIIT/Cardio')" class="w-full py-2.5 px-4 rounded-xl bg-navy-800 hover:bg-cyan-500 text-cyan-400 hover:text-navy-950 font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                <span>View Classes</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3: Technical Boxing & Bag Work -->
+          <article class="group rounded-2xl bg-navy-900 border border-subtle hover:border-cyan-500/60 overflow-hidden flex flex-col justify-between transition-all duration-300">
+            <div>
+              <div class="relative h-48 overflow-hidden bg-navy-800">
+                <img 
+                  src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80" 
+                  alt="Technical Boxing and Heavy Bag Work" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/800x450/111827/06B6D4?text=TECHNICAL+BOXING';"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/35 to-transparent"></div>
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-navy-950/90 border border-cyan-500/40 font-mono text-[11px] font-semibold text-cyan-400">
+                  50 MIN • ZONE C
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold text-white">Technical Boxing &amp; Bag Work</h3>
+                <p class="text-sm text-slate-400 mt-2.5 leading-relaxed">
+                  Structured 3-minute round conditioning covering stance mechanics, jab-cross combinations, slip-counter pad work, and heavy leather bag power rounds.
+                </p>
+                <div class="mt-4 pt-3 border-t border-subtle flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 rounded bg-navy-800 text-[11px] font-mono text-slate-300">12 Heavy Bags</span>
+                  <span class="px-2 py-0.5 rounded bg-navy-800 text-[11px] font-mono text-slate-300">Focus Mitts</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6">
+              <button onclick="filterScheduleAndScroll('Boxing')" class="w-full py-2.5 px-4 rounded-xl bg-navy-800 hover:bg-cyan-500 text-cyan-400 hover:text-navy-950 font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                <span>View Classes</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4: Mobility & Athletic Recovery -->
+          <article class="group rounded-2xl bg-navy-900 border border-subtle hover:border-cyan-500/60 overflow-hidden flex flex-col justify-between transition-all duration-300">
+            <div>
+              <div class="relative h-48 overflow-hidden bg-navy-800">
+                <img 
+                  src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" 
+                  alt="Mobility and Athletic Recovery Studio" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/800x450/111827/06B6D4?text=MOBILITY+%26+RECOVERY';"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/35 to-transparent"></div>
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-navy-950/90 border border-cyan-500/40 font-mono text-[11px] font-semibold text-cyan-400">
+                  45 MIN • ZONE D
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold text-white">Mobility &amp; Athletic Recovery</h3>
+                <p class="text-sm text-slate-400 mt-2.5 leading-relaxed">
+                  Controlled articular rotations (CARs), thoracic spine extension, hip capsule decompression, and loaded end-range stretching to protect joints under heavy loads.
+                </p>
+                <div class="mt-4 pt-3 border-t border-subtle flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 rounded bg-navy-800 text-[11px] font-mono text-slate-300">Kinstretch</span>
+                  <span class="px-2 py-0.5 rounded bg-navy-800 text-[11px] font-mono text-slate-300">Hypervolt</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6">
+              <button onclick="filterScheduleAndScroll('Mobility')" class="w-full py-2.5 px-4 rounded-xl bg-navy-800 hover:bg-cyan-500 text-cyan-400 hover:text-navy-950 font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
+                <span>View Classes</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- 3 Genuine Member Transformation Case Studies -->
+      <div>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+          <div>
+            <span class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">Documented Floor Logs</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+              Member <span class="text-cyan-400">Progress Reports</span>
+            </h2>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 max-w-md">
+            Verified 16-week training cycles recorded via BluePeak InBody body-composition scans and barbell strength logs.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Member Transformation 1 -->
+          <div class="rounded-2xl bg-navy-900 border border-subtle overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="relative h-48 bg-navy-800 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=80" 
+                  alt="Usman Javed 16-Week Strength & Fat Loss Progress" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/700x420/1E293B/06B6D4?text=USMAN+JAVED+16+WEEKS';"
+                  class="w-full h-full object-cover object-center opacity-75"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent"></div>
+                <div class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-navy-950/90 border border-gold-500/40 font-mono text-[11px] font-bold text-gold-400">
+                  16 WEEKS
+                </div>
+                <div class="absolute bottom-3 left-4 right-4 grid grid-cols-2 gap-2">
+                  <div class="px-2.5 py-1.5 rounded-lg bg-navy-950/90 border border-subtle">
+                    <div class="text-[10px] text-slate-400 uppercase">Body Weight</div>
+                    <div class="font-mono text-xs font-bold text-cyan-400">94.5 kg → 82.8 kg</div>
+                  </div>
+                  <div class="px-2.5 py-1.5 rounded-lg bg-navy-950/90 border border-subtle">
+                    <div class="text-[10px] text-slate-400 uppercase">Deadlift PR</div>
+                    <div class="font-mono text-xs font-bold text-gold-400">110 kg → 175 kg</div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-display text-lg font-bold text-white">Usman Javed, 33</h3>
+                  <span class="font-mono text-xs text-slate-400">Coach Tariq Mahmood</span>
+                </div>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  "Working in banking kept me seated 10 hours a day. Coach Tariq structured a 4-day upper/lower barbell split paired with a 2,100 kcal macro plan. Dropped 11.7 kg while adding 65 kg to my conventional deadlift."
+                </p>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 bg-navy-800/40 border-t border-subtle flex items-center justify-between font-mono text-[11px]">
+              <span class="text-slate-400">Tier: All-Access Pro</span>
+              <span class="text-cyan-400 font-semibold">Body Fat: 26% → 16.4%</span>
+            </div>
+          </div>
+
+          <!-- Member Transformation 2 -->
+          <div class="rounded-2xl bg-navy-900 border border-subtle overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="relative h-48 bg-navy-800 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=700&q=80" 
+                  alt="Dr. Mahnoor Raza Ladies-Only Block Progress" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/700x420/1E293B/EAB308?text=DR.+MAHNOOR+RAZA';"
+                  class="w-full h-full object-cover object-top opacity-75"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent"></div>
+                <div class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-navy-950/90 border border-gold-500/40 font-mono text-[11px] font-bold text-gold-400">
+                  16 WEEKS
+                </div>
+                <div class="absolute bottom-3 left-4 right-4 grid grid-cols-2 gap-2">
+                  <div class="px-2.5 py-1.5 rounded-lg bg-navy-950/90 border border-subtle">
+                    <div class="text-[10px] text-slate-400 uppercase">Body Fat %</div>
+                    <div class="font-mono text-xs font-bold text-cyan-400">31.2% → 23.8%</div>
+                  </div>
+                  <div class="px-2.5 py-1.5 rounded-lg bg-navy-950/90 border border-subtle">
+                    <div class="text-[10px] text-slate-400 uppercase">Back Squat</div>
+                    <div class="font-mono text-xs font-bold text-gold-400">35 kg → 80 kg</div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-display text-lg font-bold text-white">Dr. Mahnoor Raza, 29</h3>
+                  <span class="font-mono text-xs text-slate-400">Coach Ayesha Khan</span>
+                </div>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  "The dedicated 11 AM–3 PM Ladies-Only block gave me full privacy on the Rogue squat racks. Coach Ayesha built my barbell technique from scratch—I squatted 80 kg for 5 clean reps last week."
+                </p>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 bg-navy-800/40 border-t border-subtle flex items-center justify-between font-mono text-[11px]">
+              <span class="text-slate-400">Tier: All-Access Pro</span>
+              <span class="text-gold-400 font-semibold">+2.9 kg Skeletal Muscle</span>
+            </div>
+          </div>
+
+          <!-- Member Transformation 3 -->
+          <div class="rounded-2xl bg-navy-900 border border-subtle overflow-hidden flex flex-col justify-between">
+            <div>
+              <div class="relative h-48 bg-navy-800 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=700&q=80" 
+                  alt="Zainab & Daniyal Conditioning and Boxing Progress" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/700x420/1E293B/06B6D4?text=DANIYAL+FAROOQ+16+WEEKS';"
+                  class="w-full h-full object-cover object-center opacity-75"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent"></div>
+                <div class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-navy-950/90 border border-gold-500/40 font-mono text-[11px] font-bold text-gold-400">
+                  16 WEEKS
+                </div>
+                <div class="absolute bottom-3 left-4 right-4 grid grid-cols-2 gap-2">
+                  <div class="px-2.5 py-1.5 rounded-lg bg-navy-950/90 border border-subtle">
+                    <div class="text-[10px] text-slate-400 uppercase">2km Row Time</div>
+                    <div class="font-mono text-xs font-bold text-cyan-400">8:42 → 7:14</div>
+                  </div>
+                  <div class="px-2.5 py-1.5 rounded-lg bg-navy-950/90 border border-subtle">
+                    <div class="text-[10px] text-slate-400 uppercase">Lean Mass</div>
+                    <div class="font-mono text-xs font-bold text-gold-400">+4.4 kg Gain</div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-display text-lg font-bold text-white">Daniyal Farooq, 25</h3>
+                  <span class="font-mono text-xs text-slate-400">Coach Bilal Afridi</span>
+                </div>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  "Combining Coach Bilal's Tuesday/Thursday technical boxing sessions with Concept2 interval conditioning shaved 88 seconds off my 2,000m row while putting 4.4 kg of lean mass onto my frame."
+                </p>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 bg-navy-800/40 border-t border-subtle flex items-center justify-between font-mono text-[11px]">
+              <span class="text-slate-400">Tier: VIP 1-on-1 Coaching</span>
+              <span class="text-cyan-400 font-semibold">Resting HR: 74 → 56 bpm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INTERACTIVE WEEKLY CLASS SCHEDULE (MON–SUN + CATEGORY FILTERS) -->
+  <section id="schedule" class="py-20 bg-navy-900/40 border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">7-Day Floor Timetable</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2">
+            Weekly Class <span class="text-cyan-400">Schedule</span>
+          </h2>
+        </div>
+        <p class="text-slate-400 max-w-md text-sm sm:text-base">
+          Filter by day of the week and training discipline. Click <span class="text-cyan-400 font-semibold">Reserve Spot</span> to lock in your station with pre-filled class details.
+        </p>
+      </div>
+
+      <!-- Dual Filter Controls -->
+      <div class="rounded-2xl bg-navy-900 border border-subtle p-4 sm:p-5 mb-8 space-y-4 shadow-xl">
+        <!-- Day Tabs (Mon - Sun) -->
+        <div role="tablist" aria-label="Filter Schedule by Day" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" id="scheduleDayTabs">
+          <!-- Populated dynamically by JS -->
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-subtle" id="scheduleCategoryPills">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+
+      <!-- Dynamic Class Cards List -->
+      <div id="scheduleListContainer" class="space-y-3.5">
+        <!-- Populated dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WORKING BMI, BODY FAT % & DAILY CALORIE/MACRO CALCULATOR -->
+  <section id="calculator" class="py-20 bg-navy-950 border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">Mifflin-St Jeor &amp; Deurenberg Telemetry</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2">
+            Macro &amp; <span class="text-gold-500">Body-Fat Calculator</span>
+          </h2>
+        </div>
+        <p class="text-slate-400 max-w-md text-sm sm:text-base">
+          Calculate your exact daily caloric target, estimated body-fat percentage, and protein/carb/fat gram split—then send the report straight to a BluePeak coach.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Left Input Controls (6 Columns) -->
+        <div class="lg:col-span-6 rounded-2xl bg-navy-900 border border-subtle p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-5">
+            <!-- Unit System & Biological Sex Toggle Row -->
+            <div class="grid grid-cols-2 gap-3">
+              <!-- Metric vs Imperial Toggle -->
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Units</label>
+                <div class="grid grid-cols-2 p-1 rounded-xl bg-navy-950 border border-subtle">
+                  <button type="button" id="unitMetricBtn" onclick="setMacroUnit('metric')" class="py-2 rounded-lg text-xs font-mono font-bold bg-cyan-500 text-navy-950 transition-all">
+                    Metric (kg/cm)
+                  </button>
+                  <button type="button" id="unitImperialBtn" onclick="setMacroUnit('imperial')" class="py-2 rounded-lg text-xs font-mono font-semibold text-slate-400 hover:text-white transition-all">
+                    Imperial (lb/ft)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Gender Selector -->
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Sex</label>
+                <div class="grid grid-cols-2 p-1 rounded-xl bg-navy-950 border border-subtle">
+                  <button type="button" id="sexMaleBtn" onclick="setMacroSex('male')" class="py-2 rounded-lg text-xs font-semibold bg-navy-800 text-cyan-400 border border-cyan-500/40 transition-all">
+                    Male
+                  </button>
+                  <button type="button" id="sexFemaleBtn" onclick="setMacroSex('female')" class="py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
+                    Female
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Age + Height + Weight Inputs -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="calcAge" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Age (Years)</label>
+                <input id="calcAge" type="number" min="15" max="85" value="28" oninput="recalculateMacros()" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white font-mono text-sm" />
+              </div>
+
+              <!-- Metric Height Input -->
+              <div id="metricHeightGroup">
+                <label for="calcHeightCm" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Height (cm)</label>
+                <input id="calcHeightCm" type="number" min="130" max="230" value="178" oninput="recalculateMacros()" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white font-mono text-sm" />
+              </div>
+
+              <!-- Imperial Height Input (ft + in) -->
+              <div id="imperialHeightGroup" class="hidden">
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Height (ft / in)</label>
+                <div class="grid grid-cols-2 gap-2">
+                  <input id="calcHeightFt" type="number" min="4" max="7" value="5" oninput="recalculateMacros()" aria-label="Feet" class="w-full px-3 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white font-mono text-sm" />
+                  <input id="calcHeightIn" type="number" min="0" max="11" value="10" oninput="recalculateMacros()" aria-label="Inches" class="w-full px-3 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white font-mono text-sm" />
+                </div>
+              </div>
+
+              <!-- Weight Input -->
+              <div>
+                <label id="calcWeightLabel" for="calcWeight" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Weight (kg)</label>
+                <input id="calcWeight" type="number" min="35" max="450" value="80" oninput="recalculateMacros()" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white font-mono text-sm" />
+              </div>
+            </div>
+
+            <!-- Activity Level Selector -->
+            <div>
+              <label for="calcActivity" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Weekly Training &amp; Activity Load</label>
+              <select id="calcActivity" onchange="recalculateMacros()" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white text-sm">
+                <option value="1.2">Sedentary (Desk work, minimal structured training)</option>
+                <option value="1.375">Lightly Active (1–3 gym or cardio sessions / week)</option>
+                <option value="1.55" selected>Moderately Active (3–4 structured training days / week)</option>
+                <option value="1.725">Heavy Lifting 5–6x/wk (High barbell &amp; conditioning volume)</option>
+              </select>
+            </div>
+
+            <!-- Fitness Goal Selector -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Physique &amp; Performance Goal</label>
+              <div class="grid grid-cols-3 gap-2.5">
+                <button type="button" id="goalCutBtn" onclick="setMacroGoal('cut')" class="py-3 px-2 rounded-xl text-xs font-semibold bg-navy-950 border border-subtle text-slate-300 hover:border-cyan-500/40 transition-all">
+                  Fat Loss (-20%)
+                </button>
+                <button type="button" id="goalMaintainBtn" onclick="setMacroGoal('maintain')" class="py-3 px-2 rounded-xl text-xs font-bold bg-cyan-500 text-navy-950 border border-cyan-500 transition-all">
+                  Maintenance
+                </button>
+                <button type="button" id="goalBulkBtn" onclick="setMacroGoal('bulk')" class="py-3 px-2 rounded-xl text-xs font-semibold bg-navy-950 border border-subtle text-slate-300 hover:border-cyan-500/40 transition-all">
+                  Lean Bulk (+12%)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Telemetry Output Panel (6 Columns) -->
+        <div class="lg:col-span-6 rounded-2xl bg-navy-900 border border-cyan-500/30 p-6 sm:p-8 flex flex-col justify-between space-y-6 shadow-2xl">
+          <!-- Top Metrics Row: BMI + Est. Body Fat % -->
+          <div class="grid grid-cols-2 gap-4 pb-6 border-b border-subtle">
+            <div class="p-4 rounded-xl bg-navy-950 border border-subtle">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">BMI Score</span>
+                <span id="bmiBadge" class="px-2.5 py-0.5 rounded-full font-mono text-[11px] font-bold bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
+                  Athletic / Normal
+                </span>
+              </div>
+              <div id="bmiOutput" class="font-mono text-3xl sm:text-4xl font-bold text-white mt-2">25.3</div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-navy-950 border border-subtle">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Est. Body Fat</span>
+                <span class="font-mono text-[11px] font-semibold text-gold-400">Deurenberg</span>
+              </div>
+              <div id="bodyFatOutput" class="font-mono text-3xl sm:text-4xl font-bold text-gold-400 mt-2">20.6%</div>
+            </div>
+          </div>
+
+          <!-- Daily Calorie Target & Segmented Visual Macro Bar -->
+          <div class="space-y-4">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Daily Target Intake</span>
+              <span id="goalSummaryLabel" class="font-mono text-xs text-cyan-400">Recomp / Maintenance</span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span id="calorieOutput" class="font-mono text-5xl sm:text-6xl font-bold text-white">2,745</span>
+              <span class="font-mono text-base font-bold text-gold-500 uppercase">kcal / day</span>
+            </div>
+
+            <!-- Segmented Visual Macro Bar (Electric Cyan, Muted Gold, Slate Blue) -->
+            <div class="space-y-2 pt-2">
+              <div class="w-full h-3.5 rounded-full bg-navy-950 border border-subtle overflow-hidden flex">
+                <div id="proteinSegment" class="h-full bg-cyan-500 transition-all duration-300" style="width: 26%"></div>
+                <div id="carbsSegment" class="h-full bg-gold-500 transition-all duration-300" style="width: 49%"></div>
+                <div id="fatsSegment" class="h-full bg-slate-500 transition-all duration-300" style="width: 25%"></div>
+              </div>
+              <div class="flex items-center justify-between font-mono text-[11px] text-slate-400">
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-cyan-500"></span>Protein (<span id="proteinPct">26%</span>)</span>
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-gold-500"></span>Carbs (<span id="carbsPct">49%</span>)</span>
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-slate-500"></span>Fats (<span id="fatsPct">25%</span>)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exact Grams Breakdown Cards -->
+          <div class="grid grid-cols-3 gap-3">
+            <div class="p-3.5 rounded-xl bg-navy-950 border border-cyan-500/30">
+              <div class="text-xs text-cyan-400 font-semibold">Protein</div>
+              <div id="proteinGrams" class="font-mono text-2xl font-bold text-white mt-1">176g</div>
+              <div class="font-mono text-[11px] text-slate-400 mt-0.5">2.2g / kg</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-navy-950 border border-gold-500/30">
+              <div class="text-xs text-gold-400 font-semibold">Carbs</div>
+              <div id="carbsGrams" class="font-mono text-2xl font-bold text-white mt-1">338g</div>
+              <div class="font-mono text-[11px] text-slate-400 mt-0.5">Fuel &amp; Glycogen</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-navy-950 border border-subtle">
+              <div class="text-xs text-slate-300 font-semibold">Fats</div>
+              <div id="fatsGrams" class="font-mono text-2xl font-bold text-white mt-1">76g</div>
+              <div class="font-mono text-[11px] text-slate-400 mt-0.5">Hormonal Health</div>
+            </div>
+          </div>
+
+          <!-- Send Macros Straight to Booking Modal -->
+          <button onclick="sendCalculatedMacrosToModal()" class="w-full py-3.5 px-5 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 transition-all active:scale-95">
+            <span>Send Macros to Coach / Trial Pass</span>
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. INTERACTIVE MEMBERSHIP & PRICING TOGGLE -->
+  <section id="memberships" class="py-20 bg-navy-900/40 border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">Transparent PKR Tiers</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2">
+          Membership <span class="text-cyan-400">Plans</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Switch between Monthly, Quarterly, and Annual billing cycles. Quarterly and Annual members pay <span class="text-white font-semibold">0 PKR joining fee</span>.
+        </p>
+
+        <!-- 3-Way Billing Cycle Switcher -->
+        <div role="group" aria-label="Billing Cycle Switcher" class="inline-flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-2xl bg-navy-950 border border-subtle mt-7">
+          <button type="button" id="billMonthlyBtn" onclick="setBillingCycle('monthly')" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 text-navy-950 transition-all">
+            Monthly
+          </button>
+          <button type="button" id="billQuarterlyBtn" onclick="setBillingCycle('quarterly')" class="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <span>Quarterly</span>
+            <span class="px-2 py-0.5 rounded bg-gold-500/20 text-gold-400 font-mono text-[10px] font-bold">Save 15%</span>
+          </button>
+          <button type="button" id="billAnnualBtn" onclick="setBillingCycle('annual')" class="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <span>Annual</span>
+            <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-400 font-mono text-[10px] font-bold">Save 28%</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3 Membership Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Tier 1: Standard Floor Access -->
+        <div class="rounded-2xl bg-navy-900 border border-subtle p-7 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-semibold uppercase tracking-wider text-slate-400">Tier 01</span>
+              <span id="tier1SaveBadge" class="hidden px-2.5 py-0.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 font-mono text-[11px] font-bold text-cyan-400"></span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mt-2">Standard Floor Access</h3>
+            <p class="text-xs text-slate-400 mt-1">Full open-gym access to strength racks, dumbbells, and Concept2 cardio bays.</p>
+
+            <div class="mt-6 pb-6 border-b border-subtle">
+              <div id="tier1StrikePrice" class="hidden font-mono text-sm text-slate-500 line-through">PKR 6,500 / mo</div>
+              <div class="flex items-baseline gap-1.5">
+                <span class="font-mono text-sm font-bold text-slate-400">PKR</span>
+                <span id="tier1Price" class="font-mono text-4xl font-bold text-white">6,500</span>
+                <span class="text-xs text-slate-400">/ month</span>
+              </div>
+              <div id="tier1BillingNote" class="font-mono text-[11px] text-slate-400 mt-1.5">Billed monthly • PKR 2,000 one-time card setup</div>
+            </div>
+
+            <ul class="mt-6 space-y-3.5 text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Unlimited Rogue Rack, Eleiko &amp; Dumbbell Floor Access</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Concept2 RowErgs, SkiErgs &amp; Wattbike Atom Bay</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Digital Locker Room &amp; Hot Shower Facilities</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>1 Initial Body-Composition &amp; Movement Screen</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectMembershipPlan('Standard Floor Access', 'tier1Price')" class="mt-8 w-full py-3.5 px-5 rounded-xl bg-navy-800 hover:bg-navy-700 text-white font-semibold text-sm border border-subtle transition-colors">
+            Select Standard Plan
+          </button>
+        </div>
+
+        <!-- Tier 2: All-Access Pro (HIGHLIGHTED WITH MUTED GOLD BORDER & MOST POPULAR BADGE) -->
+        <div class="relative rounded-2xl bg-navy-900 border-2 border-gold-500 p-7 sm:p-8 flex flex-col justify-between shadow-2xl shadow-gold-500/10">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gold-500 text-navy-950 font-mono text-xs font-bold uppercase tracking-wider shadow-lg">
+            Most Popular
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-semibold uppercase tracking-wider text-gold-400">Tier 02 • Complete Access</span>
+              <span id="tier2SaveBadge" class="hidden px-2.5 py-0.5 rounded-full bg-gold-500/20 border border-gold-500/40 font-mono text-[11px] font-bold text-gold-400"></span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mt-2">All-Access Pro</h3>
+            <p class="text-xs text-slate-300 mt-1">Unlimited floor access plus all coached HIIT, Boxing, Mobility, and Ladies-Only classes.</p>
+
+            <div class="mt-6 pb-6 border-b border-subtle">
+              <div id="tier2StrikePrice" class="hidden font-mono text-sm text-slate-500 line-through">PKR 11,500 / mo</div>
+              <div class="flex items-baseline gap-1.5">
+                <span class="font-mono text-sm font-bold text-gold-400">PKR</span>
+                <span id="tier2Price" class="font-mono text-4xl font-bold text-white">11,500</span>
+                <span class="text-xs text-slate-400">/ month</span>
+              </div>
+              <div id="tier2BillingNote" class="font-mono text-[11px] text-gold-400 mt-1.5">Billed monthly • Includes all group classes</div>
+            </div>
+
+            <ul class="mt-6 space-y-3.5 text-sm text-slate-200">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+                <span>Everything in Standard Floor Access</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+                <span>Unlimited HIIT, Technical Boxing &amp; Mobility Classes</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+                <span>Full Access to 11 AM–3 PM Private Ladies-Only Block</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+                <span>Monthly InBody Scan + Custom Macro Target Updates</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-gold-400 shrink-0 mt-0.5"></i>
+                <span>14-Day Membership Freeze Allowance per Quarter</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectMembershipPlan('All-Access Pro', 'tier2Price')" class="mt-8 w-full py-3.5 px-5 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-sm shadow-lg shadow-cyan-500/20 transition-all active:scale-95">
+            Select All-Access Pro
+          </button>
+        </div>
+
+        <!-- Tier 3: VIP 1-on-1 Coaching -->
+        <div class="rounded-2xl bg-navy-900 border border-subtle p-7 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-semibold uppercase tracking-wider text-cyan-400">Tier 03 • Private Coaching</span>
+              <span id="tier3SaveBadge" class="hidden px-2.5 py-0.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 font-mono text-[11px] font-bold text-cyan-400"></span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mt-2">VIP 1-on-1 Coaching</h3>
+            <p class="text-xs text-slate-400 mt-1">Dedicated personal strength coach, individualized periodization, and weekly nutrition audits.</p>
+
+            <div class="mt-6 pb-6 border-b border-subtle">
+              <div id="tier3StrikePrice" class="hidden font-mono text-sm text-slate-500 line-through">PKR 24,000 / mo</div>
+              <div class="flex items-baseline gap-1.5">
+                <span class="font-mono text-sm font-bold text-slate-400">PKR</span>
+                <span id="tier3Price" class="font-mono text-4xl font-bold text-white">24,000</span>
+                <span class="text-xs text-slate-400">/ month</span>
+              </div>
+              <div id="tier3BillingNote" class="font-mono text-[11px] text-slate-400 mt-1.5">Billed monthly • 12 private 1-on-1 sessions/mo</div>
+            </div>
+
+            <ul class="mt-6 space-y-3.5 text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>12 Private 1-on-1 Coaching Sessions per Month</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Bespoke Barbell &amp; Conditioning Programming Block</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Bi-Weekly InBody Analysis &amp; WhatsApp Coach Check-Ins</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Dedicated Permanent Gear Locker &amp; Towel Service</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectMembershipPlan('VIP 1-on-1 Coaching', 'tier3Price')" class="mt-8 w-full py-3.5 px-5 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 font-semibold text-sm border border-gold-500/40 transition-colors">
+            Select VIP Coaching
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. WORKING TRAINER DIRECTORY & 1-ON-1 SESSION BOOKING -->
+  <section id="trainers" class="py-20 bg-navy-950 border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">Accredited Performance Staff</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2">
+            BluePeak <span class="text-gold-500">Coaching Roster</span>
+          </h2>
+        </div>
+        <p class="text-slate-400 max-w-md text-sm sm:text-base">
+          Select an available time slot pill on any coach card below, then click <span class="text-cyan-400 font-semibold">Book 1-on-1 Session</span> to reserve your consultation.
+        </p>
+      </div>
+
+      <div id="trainerGridContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Populated dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ ACCORDION & ABBOTTABAD LOCATION FOOTER -->
+  <section id="faq" class="py-20 bg-navy-900/40 border-b border-subtle">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">Facility Operations</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">
+          Frequently Asked <span class="text-cyan-400">Questions</span>
+        </h2>
+      </div>
+
+      <div class="space-y-3" id="faqAccordionContainer">
+        <!-- FAQ 1 -->
+        <div class="rounded-2xl bg-navy-900 border border-subtle overflow-hidden">
+          <button type="button" onclick="toggleFaq(0)" aria-expanded="true" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-navy-800/40 transition-colors">
+            <span class="font-display text-base sm:text-lg font-bold text-white">Can I freeze my membership when traveling out of Abbottabad?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-cyan-400 shrink-0 rotate-180 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-subtle pt-4">
+            Yes. Quarterly memberships include up to 14 days of complimentary hold time, and Annual memberships include up to 35 days (split into up to two travel blocks). Notify the front desk or WhatsApp concierge 24 hours before your departure.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="rounded-2xl bg-navy-900 border border-subtle overflow-hidden">
+          <button type="button" onclick="toggleFaq(1)" aria-expanded="false" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-navy-800/40 transition-colors">
+            <span class="font-display text-base sm:text-lg font-bold text-white">How do the dedicated Ladies-Only training hours work?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-cyan-400 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-subtle pt-4">
+            Monday through Saturday from 11:00 AM to 3:00 PM, the entire 14,500 sq. ft. training floor, frosted glass frontage, and reception are staffed exclusively by female coaches and female front-desk personnel. Male keycards are automatically paused during this 4-hour window.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="rounded-2xl bg-navy-900 border border-subtle overflow-hidden">
+          <button type="button" onclick="toggleFaq(2)" aria-expanded="false" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-navy-800/40 transition-colors">
+            <span class="font-display text-base sm:text-lg font-bold text-white">What locker room, shower, and parking amenities are included?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-cyan-400 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-subtle pt-4">
+            Both men’s and women’s changing suites feature PIN-code day lockers, instant hot-water rain showers, filtered chilled drinking stations, and dedicated basement/front parking at Al-Falah Plaza on Main Mansehra Road.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="rounded-2xl bg-navy-900 border border-subtle overflow-hidden">
+          <button type="button" onclick="toggleFaq(3)" aria-expanded="false" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-navy-800/40 transition-colors">
+            <span class="font-display text-base sm:text-lg font-bold text-white">What happens during my first 3-Day Free Pass visit?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-cyan-400 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-subtle pt-4">
+            Present your digital Guest Pass ID at the 2nd Floor reception desk. You will receive a 10-minute facility walkthrough, a complimentary InBody body-composition scan, and full access to the lifting floor or any scheduled group class for 3 consecutive days—with zero obligation.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="rounded-2xl bg-navy-900 border border-subtle overflow-hidden">
+          <button type="button" onclick="toggleFaq(4)" aria-expanded="false" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-navy-800/40 transition-colors">
+            <span class="font-display text-base sm:text-lg font-bold text-white">Which payment methods do you accept for memberships?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-cyan-400 shrink-0 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-panel hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-subtle pt-4">
+            We accept Raast IBFT instant bank transfers, Visa/Mastercard debit and credit cards at the desk, JazzCash, EasyPaisa, and cash payments with an instant digital receipt.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & FOOTER SECTION -->
+  <footer id="location" class="bg-navy-950 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-14 border-b border-subtle">
+        
+        <!-- Brand & Concierge Copy (4 Cols) -->
+        <div class="lg:col-span-4 space-y-5">
+          <a href="#" class="inline-flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-navy-900 border border-cyan-500/40 flex items-center justify-center">
+              <svg viewBox="0 0 32 32" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 24L13 8L19 18L23 12L28 24H4Z" stroke="#06B6D4" stroke-width="2.4" stroke-linejoin="round"/>
+                <path d="M13 8L16.5 14L13 16.5L9.5 14L13 8Z" fill="#EAB308"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-display text-2xl font-bold text-white leading-none">BLUE<span class="text-cyan-500">PEAK</span></span>
+              <span class="block font-mono text-[10px] font-semibold tracking-[0.22em] text-gold-500 uppercase mt-1">FITNESS ABBOTTABAD</span>
+            </div>
+          </a>
+
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Calibrated strength, metabolic conditioning, and technical combat coaching built for serious progression in Jinnahabad, Abbottabad.
+          </p>
+
+          <div class="flex flex-wrap gap-3 pt-1">
+            <button onclick="openBookingModal({ mode: 'trial', title: '3-Day All-Access Free Pass' })" class="px-4 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-xs uppercase tracking-wider transition-colors">
+              Claim Free Pass
+            </button>
+            <a href="https://wa.me/923005550199?text=Hi%20BluePeak%20Fitness%20Abbottabad%2C%20I%20would%20like%20to%20inquire%20about%20memberships." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-cyan-400 border border-cyan-500/40 font-semibold text-xs uppercase tracking-wider transition-colors">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              <span>WhatsApp Desk</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Facility Address & Quick-Copy Controls (4 Cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <h3 class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">Facility Location</h3>
+          
+          <div class="p-4 rounded-2xl bg-navy-900 border border-subtle space-y-3">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+              <p id="gymAddressText" class="text-sm text-slate-200 leading-relaxed">
+                2nd Floor, Al-Falah Plaza, Main Mansehra Road, Jinnahabad, Abbottabad, KPK
+              </p>
+            </div>
+            <button type="button" onclick="copyTextToClipboard('2nd Floor, Al-Falah Plaza, Main Mansehra Road, Jinnahabad, Abbottabad, KPK', 'Facility address copied')" class="w-full py-2 px-3 rounded-xl bg-navy-800 hover:bg-navy-700 text-cyan-400 font-mono text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>Copy Address</span>
+            </button>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-navy-900 border border-subtle flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-gold-400 shrink-0"></i>
+              <div>
+                <div class="text-[11px] text-slate-400">Front Desk &amp; WhatsApp</div>
+                <div class="font-mono text-sm font-bold text-white">+92 300 555 0199</div>
+              </div>
+            </div>
+            <button type="button" onclick="copyTextToClipboard('+923005550199', 'Phone number copied')" class="px-3 py-2 rounded-xl bg-navy-800 hover:bg-navy-700 text-cyan-400 font-mono text-xs font-semibold flex items-center gap-1.5 transition-colors">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>Copy</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Operating Hours Breakdown (4 Cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <h3 class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400">Operating Hours</h3>
+          <div class="p-5 rounded-2xl bg-navy-900 border border-subtle space-y-3 text-sm">
+            <div class="flex items-center justify-between pb-2.5 border-b border-subtle">
+              <span class="text-slate-300">Mon – Sat (Open Floor)</span>
+              <span class="font-mono font-semibold text-white">06:00 AM – 11:00 AM</span>
+            </div>
+            <div class="flex items-center justify-between pb-2.5 border-b border-subtle">
+              <span class="text-gold-400 font-semibold">Mon – Sat (Ladies-Only)</span>
+              <span class="font-mono font-semibold text-gold-400">11:00 AM – 03:00 PM</span>
+            </div>
+            <div class="flex items-center justify-between pb-2.5 border-b border-subtle">
+              <span class="text-slate-300">Mon – Sat (Evening Floor)</span>
+              <span class="font-mono font-semibold text-white">03:00 PM – 11:00 PM</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-300">Sunday (Open Lifting)</span>
+              <span class="font-mono font-semibold text-cyan-400">02:00 PM – 09:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Quick Links -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div>&copy; <span id="footerYear">2026</span> BluePeak Fitness Abbottabad. All rights reserved.</div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#programs" class="hover:text-cyan-400 transition-colors">Programs</a>
+          <a href="#schedule" class="hover:text-cyan-400 transition-colors">Schedule</a>
+          <a href="#calculator" class="hover:text-cyan-400 transition-colors">Macro Lab</a>
+          <a href="#memberships" class="hover:text-cyan-400 transition-colors">Memberships</a>
+          <a href="#trainers" class="hover:text-cyan-400 transition-colors">Coaches</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 9. UNIFIED END-TO-END BOOKING, CHECKOUT & DIGITAL GUEST PASS MODAL -->
+  <div id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalHeadline" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/85 backdrop-blur-md overflow-y-auto">
+    <div class="relative w-full max-w-lg rounded-2xl bg-navy-900 border border-cyan-500/40 shadow-2xl overflow-hidden my-8">
+      
+      <!-- Top Mode Switcher Strip -->
+      <div class="px-6 pt-5 pb-4 bg-navy-950 border-b border-subtle flex items-center justify-between gap-3">
+        <div class="flex items-center gap-1.5 bg-navy-900 p-1 rounded-xl border border-subtle">
+          <button type="button" id="modalTabTrial" onclick="switchModalMode('trial')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-500 text-navy-950 transition-all">
+            3-Day Pass
+          </button>
+          <button type="button" id="modalTabReservation" onclick="switchModalMode('reservation')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all">
+            Class / Coach
+          </button>
+          <button type="button" id="modalTabMembership" onclick="switchModalMode('membership')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all">
+            Membership
+          </button>
+        </div>
+
+        <button type="button" onclick="closeBookingModal()" aria-label="Close Modal" class="p-2 rounded-xl bg-navy-900 hover:bg-navy-800 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- STEP 1: LEAD CAPTURE & RESERVATION FORM -->
+      <form id="bookingFormView" onsubmit="handleBookingSubmit(event)" novalidate class="p-6 sm:p-7 space-y-5">
+        <div>
+          <span id="modalModeEyebrow" class="font-mono text-[11px] font-bold uppercase tracking-wider text-gold-400">Complimentary Facility Access</span>
+          <h3 id="modalHeadline" class="font-display text-2xl font-bold text-white mt-1">Claim 3-Day All-Access Free Pass</h3>
+        </div>
+
+        <!-- Contextual Pre-filled Selection Banner -->
+        <div id="modalSelectionBox" class="p-3.5 rounded-xl bg-navy-950 border border-cyan-500/30 flex items-center justify-between gap-3">
+          <div>
+            <div class="text-[11px] font-mono uppercase text-slate-400">Selected Item</div>
+            <div id="modalSelectedSummary" class="text-sm font-semibold text-cyan-400 mt-0.5">3-Day All-Access Trial Pass</div>
+          </div>
+          <span class="px-2.5 py-1 rounded-md bg-gold-500/15 border border-gold-500/40 font-mono text-[11px] font-bold text-gold-400">
+            Instant Pass
+          </span>
+        </div>
+
+        <!-- Full Name -->
+        <div>
+          <label for="leadFullName" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Full Name *</label>
+          <input id="leadFullName" type="text" placeholder="e.g., Hamadullah Khan" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white text-sm" />
+          <p id="errFullName" class="hidden text-xs text-gold-400 font-medium mt-1">Please enter your full name (at least 2 characters).</p>
+        </div>
+
+        <!-- Phone / WhatsApp Number -->
+        <div>
+          <label for="leadPhone" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Phone / WhatsApp Number *</label>
+          <input id="leadPhone" type="tel" placeholder="e.g., 0300 1234567" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white font-mono text-sm" />
+          <p id="errPhone" class="hidden text-xs text-gold-400 font-medium mt-1">Please enter a valid 10–13 digit mobile number.</p>
+        </div>
+
+        <!-- Primary Goal & Preferred Time Slot -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="leadGoal" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Primary Goal</label>
+            <select id="leadGoal" class="w-full px-3.5 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white text-sm">
+              <option value="Strength & Hypertrophy">Strength &amp; Hypertrophy</option>
+              <option value="Fat Loss & Conditioning">Fat Loss &amp; Conditioning</option>
+              <option value="Technical Boxing & Fitness">Technical Boxing &amp; Fitness</option>
+              <option value="Ladies-Only Strength Block">Ladies-Only Strength Block</option>
+              <option value="Mobility & Joint Rehab">Mobility &amp; Joint Rehab</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="leadTimeSlot" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Preferred Time Slot</label>
+            <select id="leadTimeSlot" class="w-full px-3.5 py-3 rounded-xl bg-navy-950 border border-subtle focus:border-cyan-500 focus:outline-none text-white text-sm">
+              <option value="Morning (06:30 AM – 10:30 AM)">Morning (06:30 AM – 10:30 AM)</option>
+              <option value="Ladies-Only (11:00 AM – 03:00 PM)">Ladies-Only (11:00 AM – 03:00 PM)</option>
+              <option value="Afternoon (03:30 PM – 06:00 PM)">Afternoon (03:30 PM – 06:00 PM)</option>
+              <option value="Evening Peak (06:00 PM – 10:30 PM)" selected>Evening Peak (06:00 PM – 10:30 PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Optional Calculated Macros Note -->
+        <div id="modalMacroAttachNote" class="hidden p-3 rounded-xl bg-navy-800/70 border border-gold-500/30 font-mono text-xs text-gold-300">
+          <!-- Populated when sent from Macro Calculator -->
+        </div>
+
+        <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-sm uppercase tracking-wider shadow-lg shadow-cyan-500/25 transition-all active:scale-95">
+          Generate Digital Pass &amp; Confirm
+        </button>
+      </form>
+
+      <!-- STEP 2: INSTANT CONFIRMATION & PRINTABLE DIGITAL GUEST PASS -->
+      <div id="bookingConfirmationView" class="hidden p-6 sm:p-7 space-y-5">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/40 flex items-center justify-center text-cyan-400 shrink-0">
+            <i data-lucide="badge-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="font-mono text-xs font-bold uppercase tracking-wider text-cyan-400">Pass Issued • Ready for Desk Scan</div>
+            <h3 class="font-display text-xl font-bold text-white">Your BluePeak Digital Pass</h3>
+          </div>
+        </div>
+
+        <!-- Printable Guest Pass Card -->
+        <div id="printableGuestPass" class="rounded-2xl bg-navy-950 border-2 border-cyan-500/60 p-5 space-y-4 relative overflow-hidden">
+          <div class="flex items-center justify-between border-b border-subtle pb-3.5">
+            <div>
+              <div class="font-display text-lg font-bold text-white">BLUE<span class="text-cyan-400">PEAK</span> FITNESS</div>
+              <div class="font-mono text-[10px] text-gold-400 uppercase tracking-widest">Jinnahabad, Abbottabad</div>
+            </div>
+            <div class="text-right">
+              <div class="text-[10px] font-mono text-slate-400 uppercase">Pass ID</div>
+              <div id="passIdDisplay" class="font-mono text-base font-bold text-cyan-400">BP-8492</div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-12 gap-4 items-center">
+            <div class="col-span-8 space-y-2 text-xs">
+              <div>
+                <span class="text-slate-400 block text-[10px] uppercase font-mono">Member / Guest</span>
+                <span id="passMemberName" class="font-bold text-white text-sm">Hamadullah Khan</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[10px] uppercase font-mono">Access Allocation</span>
+                <span id="passItemTitle" class="font-semibold text-cyan-400">3-Day All-Access Free Pass</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 pt-1">
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase font-mono">Preferred Window</span>
+                  <span id="passTimeSlot" class="text-slate-200 font-medium">Evening Peak</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase font-mono">Valid Until</span>
+                  <span id="passExpiryDate" class="text-gold-400 font-mono font-semibold">Dec 02, 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Deterministic SVG QR-Style Matrix Pattern -->
+            <div class="col-span-4 flex flex-col items-center justify-center p-2.5 rounded-xl bg-navy-900 border border-subtle">
+              <svg viewBox="0 0 64 64" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Gate Check-In Code">
+                <rect x="4" y="4" width="18" height="18" stroke="#06B6D4" stroke-width="4"/>
+                <rect x="10" y="10" width="6" height="6" fill="#EAB308"/>
+                <rect x="42" y="4" width="18" height="18" stroke="#06B6D4" stroke-width="4"/>
+                <rect x="48" y="10" width="6" height="6" fill="#EAB308"/>
+                <rect x="4" y="42" width="18" height="18" stroke="#06B6D4" stroke-width="4"/>
+                <rect x="10" y="48" width="6" height="6" fill="#EAB308"/>
+                <rect x="28" y="6" width="6" height="6" fill="#F8FAFC"/>
+                <rect x="28" y="18" width="6" height="12" fill="#06B6D4"/>
+                <rect x="6" y="28" width="14" height="6" fill="#F8FAFC"/>
+                <rect x="26" y="36" width="12" height="6" fill="#EAB308"/>
+                <rect x="44" y="28" width="14" height="6" fill="#06B6D4"/>
+                <rect x="28" y="48" width="8" height="12" fill="#F8FAFC"/>
+                <rect x="42" y="44" width="16" height="6" fill="#06B6D4"/>
+                <rect x="48" y="54" width="10" height="6" fill="#EAB308"/>
+              </svg>
+              <span class="font-mono text-[9px] text-slate-400 mt-1">GATE SCAN</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons: Print Pass & Direct WhatsApp Trigger -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button type="button" onclick="window.print()" class="py-3 px-4 rounded-xl bg-navy-800 hover:bg-navy-700 text-white font-semibold text-xs uppercase tracking-wider border border-subtle flex items-center justify-center gap-2 transition-colors">
+            <i data-lucide="printer" class="w-4 h-4 text-gold-400"></i>
+            <span>Print / Save Pass</span>
+          </button>
+
+          <a id="whatsappSendAnchor" href="#" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 transition-all">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span>Send Pass to Gym WhatsApp</span>
+          </a>
+        </div>
+
+        <button type="button" onclick="resetBookingModalForm()" class="w-full text-center text-xs text-slate-400 hover:text-cyan-400 transition-colors pt-1">
+          Edit details or issue another pass
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT APPLICATION ENGINE -->
+  <script>
+    // =========================================================================
+    // 1. REAL-TIME GYM FLOOR STATUS & CLOCK TELEMETRY
+    // =========================================================================
+    function updateLiveGymStatus() {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Sun, 1..6 = Mon..Sat
+      const hour = now.getHours();
+      const statusEl = document.getElementById('liveFloorStatusText');
+      const clockEl = document.getElementById('localTimeTelemetry');
+
+      if (clockEl) {
+        clockEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      }
+
+      if (!statusEl) return;
+
+      if (day === 0) {
+        // Sunday: 2:00 PM - 9:00 PM
+        if (hour >= 14 && hour < 21) {
+          statusEl.textContent = 'OPEN NOW • SUNDAY OPEN LIFTING SESSION';
+        } else {
+          statusEl.textContent = 'OPENS 2:00 PM • SUNDAY STRENGTH HOURS';
+        }
+        return;
+      }
+
+      // Monday - Saturday
+      if (hour >= 6 && hour < 11) {
+        statusEl.textContent = 'OPEN NOW • MORNING OFF-PEAK FLOOR';
+      } else if (hour >= 11 && hour < 15) {
+        statusEl.textContent = 'LADIES-ONLY BLOCK • 11 AM – 3 PM ACTIVE';
+      } else if (hour >= 15 && hour < 18) {
+        statusEl.textContent = 'OPEN NOW • AFTERNOON TRAINING WINDOW';
+      } else if (hour >= 18 && hour < 22) {
+        statusEl.textContent = 'OPEN NOW • PEAK EVENING RUSH';
+      } else if (hour >= 22 && hour < 23) {
+        statusEl.textContent = 'OPEN NOW • LATE BARBELL SESSION';
+      } else {
+        statusEl.textContent = 'OPENS 6:00 AM • CALIBRATED FLOOR READY';
+      }
+    }
+
+    // =========================================================================
+    // 2. WEEKLY CLASS SCHEDULE DATA & INTERACTIVE FILTERING (MON - SUN)
+    // =========================================================================
+    const SCHEDULE_DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const SCHEDULE_CATEGORIES = ['All', 'Strength', 'HIIT/Cardio', 'Boxing', 'Mobility', 'Ladies-Only'];
+
+    const WEEKLY_CLASSES = [
+      // Monday
+      { id: 'mon-1', day: 'Mon', time: '07:00 AM', duration: '60 min', name: 'Lower-Body Squat & Deadlift Foundations', category: 'Strength', coach: 'Coach Tariq Mahmood', level: 'All Levels', spotsLeft: 4, capacity: 12 },
+      { id: 'mon-2', day: 'Mon', time: '11:30 AM', duration: '50 min', name: 'Ladies-Only Barbell & Glute Hypertrophy', category: 'Ladies-Only', coach: 'Coach Ayesha Khan', level: 'All Levels', spotsLeft: 3, capacity: 14 },
+      { id: 'mon-3', day: 'Mon', time: '05:30 PM', duration: '45 min', name: 'Concept2 & Wattbike Engine Intervals', category: 'HIIT/Cardio', coach: 'Coach Bilal Afridi', level: 'Intermediate', spotsLeft: 6, capacity: 16 },
+      { id: 'mon-4', day: 'Mon', time: '07:15 PM', duration: '50 min', name: 'Technical Boxing: Footwork & Heavy Bag Rounds', category: 'Boxing', coach: 'Coach Bilal Afridi', level: 'All Levels', spotsLeft: 2, capacity: 12 },
+
+      // Tuesday
+      { id: 'tue-1', day: 'Tue', time: '07:30 AM', duration: '45 min', name: 'Morning Metabolic Sled & Kettlebell Circuit', category: 'HIIT/Cardio', coach: 'Coach Bilal Afridi', level: 'All Levels', spotsLeft: 7, capacity: 16 },
+      { id: 'tue-2', day: 'Tue', time: '12:00 PM', duration: '45 min', name: 'Ladies-Only Core Conditioning & Low-Impact HIIT', category: 'Ladies-Only', coach: 'Coach Ayesha Khan', level: 'Beginner Friendly', spotsLeft: 5, capacity: 14 },
+      { id: 'tue-3', day: 'Tue', time: '06:00 PM', duration: '60 min', name: 'Upper-Body Push/Pull Hypertrophy Block', category: 'Strength', coach: 'Coach Tariq Mahmood', level: 'Intermediate', spotsLeft: 3, capacity: 12 },
+      { id: 'tue-4', day: 'Tue', time: '08:00 PM', duration: '45 min', name: 'Thoracic Spine & Hip Capsule Mobility', category: 'Mobility', coach: 'Coach Hamza Siddiqui', level: 'All Levels', spotsLeft: 8, capacity: 15 },
+
+      // Wednesday
+      { id: 'wed-1', day: 'Wed', time: '07:00 AM', duration: '60 min', name: 'Competition Bench Press & Overhead Mechanics', category: 'Strength', coach: 'Coach Tariq Mahmood', level: 'All Levels', spotsLeft: 5, capacity: 12 },
+      { id: 'wed-2', day: 'Wed', time: '11:30 AM', duration: '50 min', name: 'Ladies-Only Strength & Posture Conditioning', category: 'Ladies-Only', coach: 'Coach Ayesha Khan', level: 'All Levels', spotsLeft: 4, capacity: 14 },
+      { id: 'wed-3', day: 'Wed', time: '06:30 PM', duration: '50 min', name: 'Counter-Punching Pad Work & Sparring Drills', category: 'Boxing', coach: 'Coach Bilal Afridi', level: 'Intermediate', spotsLeft: 3, capacity: 12 },
+
+      // Thursday
+      { id: 'thu-1', day: 'Thu', time: '07:30 AM', duration: '45 min', name: 'Anaerobic Threshold: SkiErg & AirBike Sprint', category: 'HIIT/Cardio', coach: 'Coach Bilal Afridi', level: 'High Output', spotsLeft: 5, capacity: 16 },
+      { id: 'thu-2', day: 'Thu', time: '12:30 PM', duration: '45 min', name: 'Ladies-Only Mobility & Pre/Post-Natal Core', category: 'Ladies-Only', coach: 'Coach Ayesha Khan', level: 'All Levels', spotsLeft: 6, capacity: 14 },
+      { id: 'thu-3', day: 'Thu', time: '06:00 PM', duration: '60 min', name: 'Posterior Chain & Trap-Bar Deadlift Lab', category: 'Strength', coach: 'Coach Tariq Mahmood', level: 'All Levels', spotsLeft: 2, capacity: 12 },
+      { id: 'thu-4', day: 'Thu', time: '08:00 PM', duration: '45 min', name: 'Shoulder Stability & Scapular Control', category: 'Mobility', coach: 'Coach Hamza Siddiqui', level: 'All Levels', spotsLeft: 9, capacity: 15 },
+
+      // Friday
+      { id: 'fri-1', day: 'Fri', time: '07:00 AM', duration: '50 min', name: 'Full-Body Athletic Power & Kettlebell Flows', category: 'Strength', coach: 'Coach Tariq Mahmood', level: 'All Levels', spotsLeft: 4, capacity: 12 },
+      { id: 'fri-2', day: 'Fri', time: '11:15 AM', duration: '45 min', name: 'Ladies-Only Turf Conditioning & Boxing Bag', category: 'Ladies-Only', coach: 'Coach Ayesha Khan', level: 'All Levels', spotsLeft: 3, capacity: 14 },
+      { id: 'fri-3', day: 'Fri', time: '06:30 PM', duration: '45 min', name: 'Friday Night MetCon Team Relay', category: 'HIIT/Cardio', coach: 'Coach Bilal Afridi', level: 'All Levels', spotsLeft: 5, capacity: 16 },
+
+      // Saturday
+      { id: 'sat-1', day: 'Sat', time: '09:00 AM', duration: '75 min', name: 'Saturday SBD Max-Effort Lifting Club', category: 'Strength', coach: 'Coach Tariq Mahmood', level: 'Intermediate', spotsLeft: 3, capacity: 12 },
+      { id: 'sat-2', day: 'Sat', time: '11:30 AM', duration: '55 min', name: 'Ladies-Only Full-Body Barbell & Core', category: 'Ladies-Only', coach: 'Coach Ayesha Khan', level: 'All Levels', spotsLeft: 4, capacity: 14 },
+      { id: 'sat-3', day: 'Sat', time: '04:30 PM', duration: '60 min', name: 'Amateur Boxing Conditioning & Heavy Bag Finisher', category: 'Boxing', coach: 'Coach Bilal Afridi', level: 'All Levels', spotsLeft: 4, capacity: 12 },
+
+      // Sunday
+      { id: 'sun-1', day: 'Sun', time: '03:00 PM', duration: '60 min', name: 'Full-Body Recovery Mobility & Myofascial Release', category: 'Mobility', coach: 'Coach Hamza Siddiqui', level: 'All Levels', spotsLeft: 7, capacity: 15 },
+      { id: 'sun-2', day: 'Sun', time: '05:00 PM', duration: '60 min', name: 'Open Barbell Technique Clinic (Squat & Pull)', category: 'Strength', coach: 'Coach Tariq Mahmood', level: 'All Levels', spotsLeft: 5, capacity: 12 }
+    ];
+
+    let activeScheduleDay = 'Mon';
+    let activeScheduleCategory = 'All';
+
+    function renderScheduleControls() {
+      const dayContainer = document.getElementById('scheduleDayTabs');
+      const catContainer = document.getElementById('scheduleCategoryPills');
+
+      dayContainer.innerHTML = SCHEDULE_DAYS.map(day => {
+        const isActive = day === activeScheduleDay;
+        return `
+          <button
+            type="button"
+            role="tab"
+            aria-selected="${isActive}"
+            onclick="setScheduleDay('${day}')"
+            class="px-5 py-2.5 rounded-xl font-mono text-xs font-bold uppercase tracking-wider shrink-0 transition-all ${
+              isActive
+                ? 'bg-cyan-500 text-navy-950 shadow-lg shadow-cyan-500/20'
+                : 'bg-navy-950 text-slate-300 border border-subtle hover:border-cyan-500/40 hover:text-white'
+            }"
+          >
+            ${day}
+          </button>
+        `;
+      }).join('');
+
+      catContainer.innerHTML = SCHEDULE_CATEGORIES.map(cat => {
+        const isActive = cat === activeScheduleCategory;
+        const isGoldCat = cat === 'Ladies-Only';
+        let activeClasses = 'bg-cyan-500/20 text-cyan-400 border-cyan-500/60';
+        if (isGoldCat && isActive) {
+          activeClasses = 'bg-gold-500/20 text-gold-400 border-gold-500/60';
+        }
+        return `
+          <button
+            type="button"
+            onclick="setScheduleCategory('${cat}')"
+            class="px-3.5 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
+              isActive
+                ? activeClasses
+                : 'bg-navy-950 text-slate-400 border-subtle hover:text-white'
+            }"
+          >
+            ${cat}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderScheduleList() {
+      const container = document.getElementById('scheduleListContainer');
+      const filtered = WEEKLY_CLASSES.filter(item => {
+        const dayMatch = item.day === activeScheduleDay;
+        const catMatch = activeScheduleCategory === 'All' || item.category === activeScheduleCategory;
+        return dayMatch && catMatch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="rounded-2xl bg-navy-900 border border-subtle p-10 text-center space-y-3">
+            <div class="font-display text-xl font-bold text-white">No ${activeScheduleCategory} sessions scheduled on ${activeScheduleDay}</div>
+            <p class="text-sm text-slate-400">Reset the discipline filter to inspect all sessions available on ${activeScheduleDay}.</p>
+            <button type="button" onclick="setScheduleCategory('All')" class="mt-2 px-5 py-2.5 rounded-xl bg-cyan-500 text-navy-950 font-bold text-xs uppercase tracking-wider">
+              Show All ${activeScheduleDay} Classes
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(cls => {
+        const isLadies = cls.category === 'Ladies-Only';
+        const filledPct = Math.round(((cls.capacity - cls.spotsLeft) / cls.capacity) * 100);
+        const lowSpots = cls.spotsLeft <= 3;
+
+        return `
+          <div class="rounded-2xl bg-navy-900 border ${isLadies ? 'border-gold-500/35' : 'border-subtle'} hover:border-cyan-500/50 p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-5 transition-all">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6">
+              <!-- Time & Duration -->
+              <div class="sm:w-36 shrink-0">
+                <div class="font-mono text-base font-bold text-white">${cls.time}</div>
+                <div class="font-mono text-xs text-slate-400 mt-0.5">${cls.duration} • ${cls.day}</div>
+              </div>
+
+              <!-- Class Name, Category & Coach -->
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                  <span class="px-2.5 py-0.5 rounded-md font-mono text-[11px] font-bold uppercase ${
+                    isLadies
+                      ? 'bg-gold-500/20 text-gold-400 border border-gold-500/40'
+                      : 'bg-cyan-500/15 text-cyan-400 border border-cyan-500/30'
+                  }">
+                    ${cls.category}
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-md bg-navy-800 font-mono text-[11px] text-slate-300">
+                    ${cls.level}
+                  </span>
+                </div>
+                <h3 class="font-display text-lg sm:text-xl font-bold text-white">${cls.name}</h3>
+                <div class="text-xs text-slate-400 mt-1 flex items-center gap-1.5">
+                  <i data-lucide="user-check" class="w-3.5 h-3.5 text-cyan-400"></i>
+                  <span>${cls.coach}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Spots Remaining Bar + Reserve Button -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6 pt-3 lg:pt-0 border-t lg:border-t-0 border-subtle">
+              <div class="sm:w-40">
+                <div class="flex items-center justify-between font-mono text-[11px] mb-1.5">
+                  <span class="${lowSpots ? 'text-gold-400 font-bold' : 'text-cyan-400 font-semibold'}">
+                    ${cls.spotsLeft} spots left
+                  </span>
+                  <span class="text-slate-500">${cls.capacity - cls.spotsLeft}/${cls.capacity}</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-navy-950 border border-subtle overflow-hidden">
+                  <div class="h-full rounded-full ${lowSpots ? 'bg-gold-500' : 'bg-cyan-500'}" style="width: ${filledPct}%"></div>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onclick="openBookingModal({
+                  mode: 'reservation',
+                  title: '${cls.name.replace(/'/g, "\\'")}',
+                  subtitle: '${cls.day} at ${cls.time} with ${cls.coach}',
+                  preferredSlot: '${cls.time.includes('11:') || cls.time.includes('12:') ? 'Ladies-Only (11:00 AM – 03:00 PM)' : cls.time.includes('AM') ? 'Morning (06:30 AM – 10:30 AM)' : 'Evening Peak (06:00 PM – 10:30 PM)'}'
+                })"
+                class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-navy-950 font-bold text-xs uppercase tracking-wider transition-all active:scale-95 shrink-0"
+              >
+                Reserve Spot
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function setScheduleDay(day) {
+      activeScheduleDay = day;
+      renderScheduleControls();
+      renderScheduleList();
+    }
+
+    function setScheduleCategory(category) {
+      activeScheduleCategory = category;
+      renderScheduleControls();
+      renderScheduleList();
+    }
+
+    function filterScheduleAndScroll(category) {
+      activeScheduleCategory = category;
+      // Pick first day that has this category
+      const firstMatching = WEEKLY_CLASSES.find(c => c.category === category);
+      if (firstMatching) {
+        activeScheduleDay = firstMatching.day;
+      }
+      renderScheduleControls();
+      renderScheduleList();
+      document.getElementById('schedule').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // =========================================================================
+    // 3. BMI, BODY FAT % & DAILY CALORIE/MACRO CALCULATOR
+    // =========================================================================
+    let macroState = {
+      unit: 'metric', // 'metric' | 'imperial'
+      sex: 'male',    // 'male' | 'female'
+      goal: 'maintain', // 'cut' | 'maintain' | 'bulk'
+      latestSummary: ''
+    };
+
+    function setMacroUnit(unit) {
+      if (macroState.unit === unit) return;
+      const weightInput = document.getElementById('calcWeight');
+      const currentWeight = parseFloat(weightInput.value) || 80;
+
+      if (unit === 'imperial') {
+        const cm = parseFloat(document.getElementById('calcHeightCm').value) || 178;
+        const totalInches = Math.round(cm / 2.54);
+        document.getElementById('calcHeightFt').value = Math.floor(totalInches / 12);
+        document.getElementById('calcHeightIn').value = totalInches % 12;
+        document.getElementById('calcWeightLabel').textContent = 'Weight (lbs)';
+        weightInput.value = Math.round(currentWeight * 2.20462);
+
+        document.getElementById('metricHeightGroup').classList.add('hidden');
+        document.getElementById('imperialHeightGroup').classList.remove('hidden');
+
+        document.getElementById('unitImperialBtn').className = 'py-2 rounded-lg text-xs font-mono font-bold bg-cyan-500 text-navy-950 transition-all';
+        document.getElementById('unitMetricBtn').className = 'py-2 rounded-lg text-xs font-mono font-semibold text-slate-400 hover:text-white transition-all';
+      } else {
+        const ft = parseFloat(document.getElementById('calcHeightFt').value) || 5;
+        const inches = parseFloat(document.getElementById('calcHeightIn').value) || 10;
+        document.getElementById('calcHeightCm').value = Math.round(((ft * 12) + inches) * 2.54);
+        document.getElementById('calcWeightLabel').textContent = 'Weight (kg)';
+        weightInput.value = Math.round(currentWeight / 2.20462);
+
+        document.getElementById('imperialHeightGroup').classList.add('hidden');
+        document.getElementById('metricHeightGroup').classList.remove('hidden');
+
+        document.getElementById('unitMetricBtn').className = 'py-2 rounded-lg text-xs font-mono font-bold bg-cyan-500 text-navy-950 transition-all';
+        document.getElementById('unitImperialBtn').className = 'py-2 rounded-lg text-xs font-mono font-semibold text-slate-400 hover:text-white transition-all';
+      }
+
+      macroState.unit = unit;
+      recalculateMacros();
+    }
+
+    function setMacroSex(sex) {
+      macroState.sex = sex;
+      const maleBtn = document.getElementById('sexMaleBtn');
+      const femaleBtn = document.getElementById('sexFemaleBtn');
+
+      if (sex === 'male') {
+        maleBtn.className = 'py-2 rounded-lg text-xs font-semibold bg-navy-800 text-cyan-400 border border-cyan-500/40 transition-all';
+        femaleBtn.className = 'py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+      } else {
+        femaleBtn.className = 'py-2 rounded-lg text-xs font-semibold bg-navy-800 text-gold-400 border border-gold-500/40 transition-all';
+        maleBtn.className = 'py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+      }
+      recalculateMacros();
+    }
+
+    function setMacroGoal(goal) {
+      macroState.goal = goal;
+      const mapping = {
+        cut: 'goalCutBtn',
+        maintain: 'goalMaintainBtn',
+        bulk: 'goalBulkBtn'
+      };
+      Object.entries(mapping).forEach(([key, btnId]) => {
+        const el = document.getElementById(btnId);
+        if (key === goal) {
+          el.className = 'py-3 px-2 rounded-xl text-xs font-bold bg-cyan-500 text-navy-950 border border-cyan-500 transition-all';
+        } else {
+          el.className = 'py-3 px-2 rounded-xl text-xs font-semibold bg-navy-950 border border-subtle text-slate-300 hover:border-cyan-500/40 transition-all';
+        }
+      });
+      recalculateMacros();
+    }
+
+    function recalculateMacros() {
+      const age = Math.min(85, Math.max(15, parseFloat(document.getElementById('calcAge').value) || 28));
+      const activity = parseFloat(document.getElementById('calcActivity').value) || 1.55;
+
+      let weightKg = 80;
+      let heightCm = 178;
+
+      if (macroState.unit === 'metric') {
+        weightKg = Math.min(250, Math.max(35, parseFloat(document.getElementById('calcWeight').value) || 80));
+        heightCm = Math.min(230, Math.max(130, parseFloat(document.getElementById('calcHeightCm').value) || 178));
+      } else {
+        const lbs = Math.min(550, Math.max(75, parseFloat(document.getElementById('calcWeight').value) || 176));
+        const ft = Math.min(7, Math.max(4, parseFloat(document.getElementById('calcHeightFt').value) || 5));
+        const inches = Math.min(11, Math.max(0, parseFloat(document.getElementById('calcHeightIn').value) || 10));
+        weightKg = lbs * 0.45359237;
+        heightCm = ((ft * 12) + inches) * 2.54;
+      }
+
+      const heightM = heightCm / 100;
+      const bmi = weightKg / (heightM * heightM);
+
+      // Deurenberg Adult Body Fat % Formula: (1.20 * BMI) + (0.23 * Age) - (10.8 * sexFactor) - 5.4
+      const sexFactor = macroState.sex === 'male' ? 1 : 0;
+      const estBodyFat = Math.max(5, Math.min(55, (1.20 * bmi) + (0.23 * age) - (10.8 * sexFactor) - 5.4));
+
+      // Mifflin-St Jeor BMR
+      const bmr = macroState.sex === 'male'
+        ? (10 * weightKg) + (6.25 * heightCm) - (5 * age) + 5
+        : (10 * weightKg) + (6.25 * heightCm) - (5 * age) - 161;
+
+      const tdee = bmr * activity;
+      let targetCalories = tdee;
+      let goalText = 'Maintenance / Recomp';
+
+      if (macroState.goal === 'cut') {
+        targetCalories = tdee * 0.80;
+        goalText = 'Fat Loss Deficit (-20%)';
+      } else if (macroState.goal === 'bulk') {
+        targetCalories = tdee * 1.12;
+        goalText = 'Lean Bulk Surplus (+12%)';
+      }
+
+      targetCalories = Math.round(targetCalories);
+
+      // Macro Split: 2.2g protein/kg, 25% calories from fats, remaining from carbs
+      const proteinG = Math.round(weightKg * 2.2);
+      const fatG = Math.round((targetCalories * 0.25) / 9);
+      const remainingCals = Math.max(200, targetCalories - (proteinG * 4) - (fatG * 9));
+      const carbsG = Math.round(remainingCals / 4);
+
+      const totalMacroCals = (proteinG * 4) + (carbsG * 4) + (fatG * 9);
+      const pPct = Math.round(((proteinG * 4) / totalMacroCals) * 100);
+      const cPct = Math.round(((carbsG * 4) / totalMacroCals) * 100);
+      const fPct = Math.max(5, 100 - pPct - cPct);
+
+      // BMI Badge Category
+      let bmiCategory = 'Normal Range';
+      if (bmi < 18.5) bmiCategory = 'Underweight';
+      else if (bmi >= 25 && bmi < 30) bmiCategory = 'Athletic / Overweight';
+      else if (bmi >= 30) bmiCategory = 'High Mass';
+
+      document.getElementById('bmiOutput').textContent = bmi.toFixed(1);
+      document.getElementById('bmiBadge').textContent = bmiCategory;
+      document.getElementById('bodyFatOutput').textContent = `${estBodyFat.toFixed(1)}%`;
+      document.getElementById('calorieOutput').textContent = targetCalories.toLocaleString();
+      document.getElementById('goalSummaryLabel').textContent = goalText;
+
+      document.getElementById('proteinGrams').textContent = `${proteinG}g`;
+      document.getElementById('carbsGrams').textContent = `${carbsG}g`;
+      document.getElementById('fatsGrams').textContent = `${fatG}g`;
+
+      document.getElementById('proteinPct').textContent = `${pPct}%`;
+      document.getElementById('carbsPct').textContent = `${cPct}%`;
+      document.getElementById('fatsPct').textContent = `${fPct}%`;
+
+      document.getElementById('proteinSegment').style.width = `${pPct}%`;
+      document.getElementById('carbsSegment').style.width = `${cPct}%`;
+      document.getElementById('fatsSegment').style.width = `${fPct}%`;
+
+      macroState.latestSummary = `Target: ${targetCalories.toLocaleString()} kcal/day (${proteinG}g P / ${carbsG}g C / ${fatG}g F • Est. BF ${estBodyFat.toFixed(1)}%)`;
+    }
+
+    function sendCalculatedMacrosToModal() {
+      recalculateMacros();
+      openBookingModal({
+        mode: 'trial',
+        title: '3-Day Free Pass + Macro Audit',
+        macroNote: macroState.latestSummary
+      });
+    }
+
+    // =========================================================================
+    // 4. INTERACTIVE MEMBERSHIP & 3-WAY BILLING CYCLE TOGGLE
+    // =========================================================================
+    let currentBillingCycle = 'monthly';
+
+    const PRICING_MATRIX = {
+      monthly: {
+        label: 'Monthly',
+        t1: { price: '6,500', strike: '', badge: '', note: 'Billed monthly • PKR 2,000 one-time card setup' },
+        t2: { price: '11,500', strike: '', badge: '', note: 'Billed monthly • Includes all group classes' },
+        t3: { price: '24,000', strike: '', badge: '', note: 'Billed monthly • 12 private 1-on-1 sessions/mo' }
+      },
+      quarterly: {
+        label: 'Quarterly (Save 15%)',
+        t1: { price: '5,525', strike: 'PKR 6,500 / mo', badge: 'Save 15%', note: 'Billed PKR 16,575 every 3 months • 0 PKR joining fee' },
+        t2: { price: '9,775', strike: 'PKR 11,500 / mo', badge: 'Save 15%', note: 'Billed PKR 29,325 every 3 months • 0 PKR joining fee' },
+        t3: { price: '20,400', strike: 'PKR 24,000 / mo', badge: 'Save 15%', note: 'Billed PKR 61,200 every 3 months • Priority coach slot' }
+      },
+      annual: {
+        label: 'Annual (Save 28%)',
+        t1: { price: '4,680', strike: 'PKR 6,500 / mo', badge: 'Save 28%', note: 'Billed PKR 56,160 annually • 0 PKR joining fee' },
+        t2: { price: '8,280', strike: 'PKR 11,500 / mo', badge: 'Save 28%', note: 'Billed PKR 99,360 annually • 35-day travel freeze' },
+        t3: { price: '17,280', strike: 'PKR 24,000 / mo', badge: 'Save 28%', note: 'Billed PKR 207,360 annually • Permanent gear locker' }
+      }
+    };
+
+    function setBillingCycle(cycle) {
+      currentBillingCycle = cycle;
+      const data = PRICING_MATRIX[cycle];
+
+      // Update button styles
+      const btnMap = {
+        monthly: 'billMonthlyBtn',
+        quarterly: 'billQuarterlyBtn',
+        annual: 'billAnnualBtn'
+      };
+      Object.entries(btnMap).forEach(([key, id]) => {
+        const el = document.getElementById(id);
+        if (key === cycle) {
+          el.className = 'px-5 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 text-navy-950 transition-all flex items-center gap-1.5';
+        } else {
+          el.className = 'px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-1.5';
+        }
+      });
+
+      // Update Tier 1, 2, 3 values
+      [1, 2, 3].forEach(num => {
+        const tierData = data[`t${num}`];
+        document.getElementById(`tier${num}Price`).textContent = tierData.price;
+        document.getElementById(`tier${num}BillingNote`).textContent = tierData.note;
+
+        const strikeEl = document.getElementById(`tier${num}StrikePrice`);
+        const badgeEl = document.getElementById(`tier${num}SaveBadge`);
+
+        if (tierData.strike) {
+          strikeEl.textContent = tierData.strike;
+          strikeEl.classList.remove('hidden');
+        } else {
+          strikeEl.classList.add('hidden');
+        }
+
+        if (tierData.badge) {
+          badgeEl.textContent = tierData.badge;
+          badgeEl.classList.remove('hidden');
+        } else {
+          badgeEl.classList.add('hidden');
+        }
+      });
+    }
+
+    function selectMembershipPlan(planName, priceElementId) {
+      const currentPrice = document.getElementById(priceElementId).textContent;
+      openBookingModal({
+        mode: 'membership',
+        title: `${planName} — PKR ${currentPrice}/mo`,
+        subtitle: `Billing Cycle: ${PRICING_MATRIX[currentBillingCycle].label}`
+      });
+    }
+
+    // =========================================================================
+    // 5. TRAINER DIRECTORY & CLICKABLE SLOT BOOKING
+    // =========================================================================
+    const COACHES = [
+      {
+        id: 'tariq',
+        name: 'Coach Tariq Mahmood',
+        role: 'Head of Strength & Powerlifting',
+        cert: 'NSCA-CSCS • 9 Yrs Exp.',
+        specialty: 'Competition Squat/Bench/Deadlift, Hypertrophy Periodization',
+        photo: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80',
+        slots: ['07:30 AM', '05:00 PM', '07:30 PM'],
+        selectedSlot: '05:00 PM'
+      },
+      {
+        id: 'ayesha',
+        name: 'Coach Ayesha Khan',
+        role: 'Ladies Conditioning & Pre/Post-Natal Lead',
+        cert: 'NASM-CPT • Women’s Fitness Specialist',
+        specialty: 'Ladies-Only Strength, Core Restoration, Metabolic Recomp',
+        photo: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=600&q=80',
+        slots: ['11:15 AM', '12:45 PM', '02:00 PM'],
+        selectedSlot: '11:15 AM'
+      },
+      {
+        id: 'bilal',
+        name: 'Coach Bilal Afridi',
+        role: 'Amateur Boxing & Conditioning Coach',
+        cert: 'AIBA Level-2 • 8 Yrs Exp.',
+        specialty: 'Technical Boxing, Footwork Mechanics, Concept2 Anaerobic Conditioning',
+        photo: 'https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&w=600&q=80',
+        slots: ['08:00 AM', '06:00 PM', '08:15 PM'],
+        selectedSlot: '06:00 PM'
+      },
+      {
+        id: 'hamza',
+        name: 'Coach Hamza Siddiqui',
+        role: 'Sports Rehab & Joint Mobility Specialist',
+        cert: 'DPT • Functional Range Conditioning',
+        specialty: 'Shoulder/Lower-Back Pain-Free Lifting, Kinstretch & Athletic Mobility',
+        photo: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80',
+        slots: ['09:30 AM', '04:30 PM', '08:00 PM'],
+        selectedSlot: '04:30 PM'
+      }
+    ];
+
+    function renderTrainerDirectory() {
+      const container = document.getElementById('trainerGridContainer');
+      container.innerHTML = COACHES.map(coach => {
+        const slotButtons = coach.slots.map(slot => {
+          const isSelected = slot === coach.selectedSlot;
+          return `
+            <button
+              type="button"
+              onclick="selectCoachSlot('${coach.id}', '${slot}')"
+              class="px-2.5 py-1.5 rounded-lg font-mono text-[11px] font-semibold border transition-all ${
+                isSelected
+                  ? 'bg-cyan-500 text-navy-950 border-cyan-500 font-bold'
+                  : 'bg-navy-950 text-slate-300 border-subtle hover:border-cyan-500/40'
+              }"
+            >
+              ${slot}
+            </button>
+          `;
+        }).join('');
+
+        return `
+          <article class="rounded-2xl bg-navy-900 border border-subtle hover:border-cyan-500/50 overflow-hidden flex flex-col justify-between transition-all">
+            <div>
+              <div class="relative h-56 bg-navy-800 overflow-hidden">
+                <img 
+                  src="${coach.photo}" 
+                  alt="${coach.name}" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/600x500/1E293B/06B6D4?text=${encodeURIComponent(coach.name)}';"
+                  class="w-full h-full object-cover object-top"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/25 to-transparent"></div>
+                <span class="absolute bottom-3 left-3 px-2.5 py-1 rounded-md bg-navy-950/90 border border-gold-500/40 font-mono text-[10px] font-bold text-gold-400">
+                  ${coach.cert}
+                </span>
+              </div>
+
+              <div class="p-5 space-y-3">
+                <div>
+                  <h3 class="font-display text-lg font-bold text-white">${coach.name}</h3>
+                  <div class="text-xs font-semibold text-cyan-400 mt-0.5">${coach.role}</div>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">${coach.specialty}</p>
+
+                <div class="pt-2">
+                  <div class="font-mono text-[10px] uppercase tracking-wider text-slate-400 mb-2">Available 1-on-1 Slots</div>
+                  <div class="flex flex-wrap gap-1.5">
+                    ${slotButtons}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-5 pb-5 pt-2">
+              <button
+                type="button"
+                onclick="openCoachSessionModal('${coach.id}')"
+                class="w-full py-2.5 px-4 rounded-xl bg-navy-800 hover:bg-cyan-500 text-cyan-400 hover:text-navy-950 font-bold text-xs uppercase tracking-wider transition-colors"
+              >
+                Book 1-on-1 Session
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function selectCoachSlot(coachId, slot) {
+      const coach = COACHES.find(c => c.id === coachId);
+      if (coach) {
+        coach.selectedSlot = slot;
+        renderTrainerDirectory();
+      }
+    }
+
+    function openCoachSessionModal(coachId) {
+      const coach = COACHES.find(c => c.id === coachId);
+      if (!coach) return;
+      const isLadiesSlot = coach.id === 'ayesha';
+      openBookingModal({
+        mode: 'reservation',
+        title: `1-on-1 Session: ${coach.name}`,
+        subtitle: `Selected Time Slot: ${coach.selectedSlot}`,
+        preferredSlot: isLadiesSlot ? 'Ladies-Only (11:00 AM – 03:00 PM)' : 'Evening Peak (06:00 PM – 10:30 PM)',
+        defaultGoal: isLadiesSlot ? 'Ladies-Only Strength Block' : 'Strength & Hypertrophy'
+      });
+    }
+
+    // =========================================================================
+    // 6. END-TO-END BOOKING MODAL, PRINTABLE GUEST PASS & WHATSAPP TRIGGER
+    // =========================================================================
+    let modalContext = {
+      mode: 'trial',
+      title: '3-Day All-Access Free Pass',
+      macroNote: ''
+    };
+
+    function openBookingModal(opts = {}) {
+      modalContext = {
+        mode: opts.mode || 'trial',
+        title: opts.title || '3-Day All-Access Free Pass',
+        macroNote: opts.macroNote || ''
+      };
+
+      switchModalMode(modalContext.mode, false);
+
+      document.getElementById('modalHeadline').textContent = modalContext.title;
+      document.getElementById('modalSelectedSummary').textContent = opts.subtitle
+        ? `${modalContext.title} (${opts.subtitle})`
+        : modalContext.title;
+
+      if (opts.preferredSlot) {
+        document.getElementById('leadTimeSlot').value = opts.preferredSlot;
+      }
+      if (opts.defaultGoal) {
+        document.getElementById('leadGoal').value = opts.defaultGoal;
+      }
+
+      const macroBox = document.getElementById('modalMacroAttachNote');
+      if (modalContext.macroNote) {
+        macroBox.textContent = `Attached Macro Telemetry: ${modalContext.macroNote}`;
+        macroBox.classList.remove('hidden');
+      } else {
+        macroBox.classList.add('hidden');
+      }
+
+      resetBookingModalForm();
+
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function switchModalMode(mode, updateDefaultTitle = true) {
+      modalContext.mode = mode;
+      const tabs = {
+        trial: 'modalTabTrial',
+        reservation: 'modalTabReservation',
+        membership: 'modalTabMembership'
+      };
+
+      Object.entries(tabs).forEach(([key, id]) => {
+        const btn = document.getElementById(id);
+        if (key === mode) {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-500 text-navy-950 transition-all';
+        } else {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all';
+        }
+      });
+
+      const eyebrow = document.getElementById('modalModeEyebrow');
+      if (mode === 'trial') {
+        eyebrow.textContent = 'Complimentary Facility Access';
+        if (updateDefaultTitle) {
+          modalContext.title = '3-Day All-Access Free Pass';
+          document.getElementById('modalHeadline').textContent = modalContext.title;
+          document.getElementById('modalSelectedSummary').textContent = modalContext.title;
+        }
+      } else if (mode === 'reservation') {
+        eyebrow.textContent = 'Floor Station & Coach Booking';
+        if (updateDefaultTitle) {
+          modalContext.title = 'Floor Class / 1-on-1 Session Reservation';
+          document.getElementById('modalHeadline').textContent = modalContext.title;
+          document.getElementById('modalSelectedSummary').textContent = modalContext.title;
+        }
+      } else {
+        eyebrow.textContent = 'Direct Membership Enrollment';
+        if (updateDefaultTitle) {
+          modalContext.title = 'All-Access Pro — PKR 11,500/mo';
+          document.getElementById('modalHeadline').textContent = modalContext.title;
+          document.getElementById('modalSelectedSummary').textContent = modalContext.title;
+        }
+      }
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function resetBookingModalForm() {
+      document.getElementById('bookingFormView').classList.remove('hidden');
+      document.getElementById('bookingConfirmationView').classList.add('hidden');
+      document.getElementById('errFullName').classList.add('hidden');
+      document.getElementById('errPhone').classList.add('hidden');
+    }
+
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+
+      const nameInput = document.getElementById('leadFullName');
+      const phoneInput = document.getElementById('leadPhone');
+      const goalVal = document.getElementById('leadGoal').value;
+      const slotVal = document.getElementById('leadTimeSlot').value;
+
+      const fullName = nameInput.value.trim();
+      const rawPhone = phoneInput.value.trim();
+      const digitsOnly = rawPhone.replace(/\D/g, '');
+
+      let hasError = false;
+      if (fullName.length < 2) {
+        document.getElementById('errFullName').classList.remove('hidden');
+        nameInput.classList.add('border-gold-500');
+        hasError = true;
+      } else {
+        document.getElementById('errFullName').classList.add('hidden');
+        nameInput.classList.remove('border-gold-500');
+      }
+
+      if (digitsOnly.length < 10 || digitsOnly.length > 13) {
+        document.getElementById('errPhone').classList.remove('hidden');
+        phoneInput.classList.add('border-gold-500');
+        hasError = true;
+      } else {
+        document.getElementById('errPhone').classList.add('hidden');
+        phoneInput.classList.remove('border-gold-500');
+      }
+
+      if (hasError) return;
+
+      // Generate deterministic-style unique Pass ID & 7-day expiry
+      const passId = 'BP-' + Math.floor(1000 + Math.random() * 9000);
+      const expiry = new Date();
+      expiry.setDate(expiry.getDate() + 7);
+      const expiryFormatted = expiry.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+
+      const selectedSummary = document.getElementById('modalSelectedSummary').textContent;
+
+      document.getElementById('passIdDisplay').textContent = passId;
+      document.getElementById('passMemberName').textContent = fullName;
+      document.getElementById('passItemTitle').textContent = selectedSummary;
+      document.getElementById('passTimeSlot').textContent = slotVal.split('(')[0].trim();
+      document.getElementById('passExpiryDate').textContent = expiryFormatted;
+
+      // Build clean pre-filled WhatsApp message
+      const waLines = [
+        `Hello BluePeak Fitness Abbottabad,`,
+        `I have generated my Digital Pass:`,
+        `• Pass ID: ${passId}`,
+        `• Name: ${fullName}`,
+        `• Phone: ${rawPhone}`,
+        `• Selection: ${selectedSummary}`,
+        `• Primary Goal: ${goalVal}`,
+        `• Preferred Slot: ${slotVal}`
+      ];
+      if (modalContext.macroNote) {
+        waLines.push(`• ${modalContext.macroNote}`);
+      }
+
+      const waHref = `https://wa.me/923005550199?text=${encodeURIComponent(waLines.join('\n'))}`;
+      document.getElementById('whatsappSendAnchor').setAttribute('href', waHref);
+
+      // Switch to Confirmation State
+      document.getElementById('bookingFormView').classList.add('hidden');
+      document.getElementById('bookingConfirmationView').classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // =========================================================================
+    // 7. MOBILE DRAWER, FAQ ACCORDION & CLIPBOARD UTILITIES
+    // =========================================================================
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('mobileDrawer');
+      const btn = document.getElementById('mobileMenuBtn');
+      const isHidden = drawer.classList.contains('hidden');
+      if (isHidden) {
+        drawer.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        drawer.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function closeMobileDrawer() {
+      document.getElementById('mobileDrawer').classList.add('hidden');
+      document.getElementById('mobileMenuBtn').setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleFaq(index) {
+      const panels = document.querySelectorAll('.faq-panel');
+      const icons = document.querySelectorAll('.faq-icon');
+      const buttons = document.querySelectorAll('.faq-btn');
+
+      panels.forEach((panel, i) => {
+        if (i === index) {
+          const isOpen = !panel.classList.contains('hidden');
+          if (isOpen) {
+            panel.classList.add('hidden');
+            icons[i].classList.remove('rotate-180');
+            buttons[i].setAttribute('aria-expanded', 'false');
+          } else {
+            panel.classList.remove('hidden');
+            icons[i].classList.add('rotate-180');
+            buttons[i].setAttribute('aria-expanded', 'true');
+          }
+        } else {
+          panel.classList.add('hidden');
+          icons[i].classList.remove('rotate-180');
+          buttons[i].setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    let toastTimeout = null;
+    function showCyanToast(message) {
+      const banner = document.getElementById('toastBanner');
+      document.getElementById('toastMessage').textContent = message;
+      banner.classList.remove('hidden');
+      banner.classList.add('flex');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        banner.classList.add('hidden');
+        banner.classList.remove('flex');
+      }, 3000);
+    }
+
+    function copyTextToClipboard(text, confirmationMsg) {
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      tempInput.style.position = 'fixed';
+      tempInput.style.opacity = '0';
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showCyanToast(confirmationMsg);
+      } catch (err) {
+        showCyanToast(confirmationMsg);
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // Close modal on Escape key or backdrop click
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        closeBookingModal();
+        closeMobileDrawer();
+      }
+    });
+
+    document.getElementById('bookingModal').addEventListener('click', e => {
+      if (e.target === document.getElementById('bookingModal')) {
+        closeBookingModal();
+      }
+    });
+
+    // =========================================================================
+    // 8. INITIALIZE APPLICATION ON LOAD
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      updateLiveGymStatus();
+      setInterval(updateLiveGymStatus, 60000);
+      renderScheduleControls();
+      renderScheduleList();
+      recalculateMacros();
+      renderTrainerDirectory();
+      document.getElementById('footerYear').textContent = new Date().getFullYear();
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

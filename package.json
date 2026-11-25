@@ -4,8 +4,8 @@
   "private": true,
   "description": "BluePeak Fitness — landing page and lead capture (static site for Vercel)",
   "scripts": {
-    "build": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./assets/styles.css --minify",
-    "dev": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./assets/styles.css --watch"
+    "build": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/assets/styles.css --minify",
+    "dev": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./public/assets/styles.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
